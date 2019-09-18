@@ -10,14 +10,48 @@
     </header>
 
 <form method="post" action="https://request-inspector.glitch.me/">
+
+
     <label for="username">Username:</label>
     <input id="username" name="username" type="text" placeholder="you@yourmail.com">
     <br>
 
     <label for="password">Password:</label>
-    <input id="password" name="password" type="password" plateholder="password">
+    <input id="password" name="password" type="password" value="password">
+    <br>
+    <br>
 
-    <button type="submit">Register your account.</button>
+    <label for="bio">Real quick: tell us about <em>you!</em></label>
+    <br>
+    <textarea name="bio" id="bio" rows="15" cols="45" placeholder="This helps us understand what you'd like to see from us - let us know about you and your unique needs."></textarea>
+    <br>
+    <br>
+
+
+    <h3>How'd you hear about Veridian Dynamics? (Choose all that apply)</h3>
+
+    <label for="billboard">
+    <input id="billboard" type="checkbox" name="marketing_penetration1" value="billboard"> Billboards
+    </label><br>
+
+    <label for="fmam"><input id="fmam" type="checkbox" name="marketing_penetration2" value="fmam">
+    Radio Advertisements</label><br>
+
+    <label for="internet"><input id= "internet" type="checkbox" name="marketing_penetration3" value="internet"> On the internet</label><br>
+
+    <label for="other"><input id="other" type="checkbox" name="marketing_penetration4" value="other"> Other</label><br>
+    <br>
+    <br>
+
+    <h3>What's your current browser?</h3>
+    <select name="current_browser">
+        <option value="firefox">Firefox</option>
+        <option value="microsoft_browsers">Internet Explorer or Edge</option>
+        <option value="chrome" selected>Google Chrome</option>
+        <option value="safari">Safari</option>
+    </select>
+
+    <button type="submit">Register your new customer account</button>
 
 </form>
 
