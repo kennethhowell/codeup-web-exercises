@@ -9,16 +9,33 @@
 
     <form method="post" action="https://request-inspector.glitch.me/">
         <label for="ccnum">Card Number:</label>
-        <input type="tel" id="ccnum" name="ccnum" maxlength="19" placeholder="type your number here" required autofocus>
+        <input type="tel" id="ccnum" name="ccnum" size="21" maxlength="19" placeholder="type your number here" required autofocus>
         <br>
         <br>
 
-        <label for="ccmon">Card Exp. (Month/YYYY):</label>
-        <input type="month" id="ccmon" name="ccmon">
+        <label for="ccmon">Card Exp. <small>(Month/YYYY)</small>:</label>
+        <input type="month" id="ccmon" name="ccmon" required>
         <br>
         <br>
 
-        <label></label>
+        <label for="custcvv">Security Code:</label>
+        <input type="tel" id="custcvv" name="custcvv" size="4" maxlength="4" placeholder="CVV" required>
+        <br>
+        <br>
+
+        <label for="billstreetname">Billing street address:</label>
+        <br>
+
+        <input type="text" id="billstreetname" name="billstreetname" placeholder="1234 Main Ave" required>
+        <br>
+        <input type="text" id="billcityst" name="billcityst" placeholder="Your City, ST" required>
+        <br>
+        <br>
+
+        <input type="checkbox" id="storecc" name="storecc" checked><label for="storecc">Keep this credit card on file for future transactions</label>
+        <br>
+
+        <button type="submit">Buy Now!</button>
     </form>
 
 </body>
