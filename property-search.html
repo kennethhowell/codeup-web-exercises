@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Veridian Realty</title>
+</head>
+<body>
+    <h2>Find your next pad through Veridian:</h2>
+
+        <form method="get" action="https://request-inspector.glitch.me/">
+
+            <p>What kind of property are you looking for? Fill out this information to see what matches our available listings.</p>
+            <br>
+
+            <select name="property_type">
+                <option value="apartments">Apartments</option>
+                <option value="th_condo">Townhomes/Duplexes</option>
+                <option value="condominiums">Condominiums/Highrises</option>
+                <option value="house" selected>Single family homes</option>
+            </select> (your preferred type of dwelling)
+            <br>
+            <br>
+
+            <select name="sqft">
+                <option value="small">Under 1,000 sq ft</option>
+                <option value="med">1,000 - 1,999 sq ft</option>
+                <option value="large">2,000 - 3,500 sq ft</option>
+                <option value="largest">Above 3,500 sq ft</option>
+            </select> (how large a pad do you need)
+            <br>
+            <br>
+
+            <select name="bedrooms">
+                <option value="rooms1">Studio to 1</option>
+                <option value="rooms2">2</option>
+                <option value="rooms3">3</option>
+                <option value="rooms4">4+</option>
+            </select> (your preferred number of bedrooms)
+            <br>
+            <br>
+
+            <select name="bathrooms">
+                <option value="bath1">1</option>
+                <option value="bath2">2</option>
+                <option value="bath3">3</option>
+                <option value="rooms4">4+</option>
+            </select> (your preferred number of bathrooms)
+            <br>
+            <br>
+
+            <h3>let's talk money</h3>
+
+            <small>$</small><input type="number" id="min_price" name="min_price" min="1000" placeholder="1,000">
+            <label for="min_price">(your minimum price desired)</label>
+            <br>
+
+            <small>$</small><input type="number" id="max_price" name="max_price" max="999999" placeholder="999,999">
+            <label for="max_price">(your maximum price desired)</label>
+            <br>
+            <br>
+
+            <h3>location, location, location</h3>
+            <input type="text" name="zipcode" id="zipcode" placeholder="input a zipcode">
+            <label for="zipcode">(your preferred zipcode to base your search)</label>
+
+            <button type="submit">Search now</button>
+
+
+        </form>
+
+
+</body>
+</html>
