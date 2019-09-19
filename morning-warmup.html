@@ -8,11 +8,29 @@
 <h1>Deimos</h1>
 <p>These are my morning warmups:</p>
 
-// 09-18-2019 //
+<!-- 09-18-2019 -->
 
 function sumUp (a, b) {
         return a + b;
 }
+
+<!-- 09-19-2019 write js function wherein area is 5, 6, 7
+spent most of my time trying to remember how to do that -->
+
+function triangleArea (a, b, c) {
+    let arearesult = a + b + c;
+    return arearesult / 2;
+}
+
+<!-- correct answer:
+
+function triangleArea (a, b, c) {
+    var half = (a + b + c)/2;
+    var area = Math.sqrt(half * (half - a) * (half - b) * (half - c));
+    return area;
+}
+
+console.log(triangle area(5, 6, 7)); -->
 
 </body>
 </html>
