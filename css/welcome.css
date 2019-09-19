@@ -1,0 +1,91 @@
+body {
+    background-color: antiquewhite;
+    /*background-image: url("../img/dot-grid.png");*/
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    color: peru;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    text-align: center;
+}
+
+ol {
+    list-style-type: lower-roman;
+    list-style-position: inside;
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    margin: auto;
+}
+
+hr {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 15px;
+}
+
+table tr.tabler:hover {
+    background-color: azure;
+}
+
+nav {
+    text-align: right;
+    font-size: x-small;
+    padding-top: 2em;
+}
+
+
+.fancy_header {
+    text-align: center;
+    color: firebrick;
+}
+
+.toprowfont {
+    color: firebrick;
+}
+
+
+#h2table {
+    text-align: center;
+}
+
+#toprow {
+    background-color: burlywood;
+    text-align: center;
+}
+
+#welcomemsg {
+    text-align: center;
+}
+
+#main h2 {
+    text-align: center;
+}
