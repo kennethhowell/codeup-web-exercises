@@ -16,6 +16,7 @@ body, html {
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
 header {
     background-image: url("https://loremflickr.com/1200/300");
     background-size: cover;
@@ -25,7 +26,30 @@ header {
 a {
     color: var(--link-color);
 }
-/*first edit adding em and inline block*/
+
+.container {
+    margin: 2em;
+}
+
+
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
+    overflow: auto;
+    padding: .5em;
+}
+
+.media-image {
+    width: 50px;
+    margin-top: 1.33em;
+    float: left;
+}
+
+.media-body {
+    width: calc(100% - 50px);
+    float: left;
+}
 
 .nav-item {
     padding: 1.5em;
@@ -34,20 +58,37 @@ a {
 
 .top-nav {
     background: var(--light-bg);
-    /*second edit*/
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
-/*third edit messing with avatar size*/
 .profile-image {
     position: absolute;
     top: 200px;
 }
 
-/*fourth edit messing with .profile-form plus .text-right adjustment*/
 .profile-form {
+    margin-top: 1em;
     float: right;
+}
+
+.profile-details {
+    float: left;
+    width: calc(25% - 1em);
+    margin: 0 .5em;
+}
+
+.timeline {
+    float: left;
+    width: calc(50% - 1em);
+    margin: 0 .5em;
+}
+
+.who-to-follow {
+    float: right;
+    width: calc(25% - 1em);
+    margin: 0 .5em;
 }
 
 .text-right{
@@ -71,6 +112,16 @@ a {
     background: var(--light-bg);
     height: 80px;
 }
+
+.profile-items {
+    padding: 0;
+    list-style-type: none;
+}
+
+.profile-entry {
+    margin: .5em;
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
