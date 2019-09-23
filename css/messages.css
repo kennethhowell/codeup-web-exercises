@@ -30,7 +30,7 @@ div {
 
 .message-info {
     background-color: var(--bg-infocolor);
-    color: var(--text-infocolor)
+    color: var(--text-infocolor);
 
 }
 

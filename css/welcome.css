@@ -13,6 +13,7 @@ ul {
     list-style-type: circle;
     list-style-position: inside;
     text-align: center;
+    padding-left: 0px;
 }
 
 ol {
@@ -20,6 +21,7 @@ ol {
     list-style-position: inside;
     text-align: center;
     justify-content: left;
+    padding-left: 0px;
 }
 
 img {
@@ -61,6 +63,9 @@ th, td {
     padding: 15px;
 }
 
+li {
+    text-align: center;
+}
 table tr.tabler:hover {
     background-color: azure;
 }
