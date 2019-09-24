@@ -28,7 +28,7 @@ main {
 
 .int-greenbox {
     height: 1em;
-    width: 1em;
+    width: 2em;
     background: darkgreen;
     border: 1px solid black;
 }
