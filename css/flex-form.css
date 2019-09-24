@@ -62,5 +62,6 @@ body {
     justify-content: center;
 }
 .destination {
-    margin-right: auto;
+    /*margin-right: auto;*/
+    flex-basis: 35%;
 }
