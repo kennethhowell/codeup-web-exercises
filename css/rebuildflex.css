@@ -1,0 +1,34 @@
+* {box-sizing: border-box}
+
+body {
+    background-color: royalblue;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 80%;
+    background-color: antiquewhite;
+    margin: 0 auto;
+}
+
+.card {
+    margin: 0 auto;
+    background-color: #8a780b;
+    height: 90%;
+    width: 90%;
+    padding: 1em;
+}
+
+#container {
+    background-color: #0fb784;
+    height: 5em;
+    width: 100%;
+}
+
+.int-greenbox {
+    height: 1em;
+    width: 1em;
+    background: darkgreen;
+    border: 1px solid black;
+}
