@@ -65,7 +65,7 @@ a {
 
 .profile-image {
     position: absolute;
-    top: 200px;
+    top: 250px;
 }
 
 .profile-form {
@@ -92,7 +92,7 @@ a {
 }
 
 .text-right{
-    line-height: 46px;
+    line-height: 49px;
 }
 
 .nav {
