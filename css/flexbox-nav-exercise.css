@@ -13,6 +13,10 @@ a {
     padding: .5em;
 }
 
+a:hover {
+    color: blue;
+}
+
 .container {
     background-color: #F6F6F6;
     display: flex;
@@ -36,8 +40,10 @@ a {
     font-size: 3em;
     padding: .2em 0;
     position: absolute ;
-    left: 50%;
-    margin-left: -50px;
-    top: 65%;
-    margin-top: -50px;
+    /*left: 50%;*/
+    /*margin-left: -50px;*/
+    /*top: 65%;*/
+    /*margin-top: -50px;*/
+    top: calc(50% - 79px);
+    left: calc(50% - 60px);
 }
