@@ -1,0 +1,40 @@
+:root {
+    --red: #DD412B;
+    --white: #FFFFFF;
+    --blue: #2F447B;
+    --yellow: #FBCB33;
+}
+
+.mondrain {
+    display: inline-grid;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    /*grid-template: repeat(8, 1fr) / repeat(8, 1fr);*/
+    grid-gap: 5px;
+    background-color: black;
+    grid-template-areas:
+        "boxblue boxblue boxred boxred boxred boxred boxred boxred"
+        "boxblue boxblue boxred boxred boxred boxred boxred boxred"
+        "boxyellow boxyellow boxred boxred boxred boxred boxred boxred"
+
+
+
+;
+}
+
+.boxred {
+    background: var(--red);
+}
+
+.boxwhite {
+    background: var(--white);
+}
+
+.boxblue {
+    background: var(--blue);
+}
+
+.boxyellow {
+    background: var(--yellow);
+}
