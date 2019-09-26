@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+}
+:root {
+    --bgcolor: #9ACD32;
+}
+
+.container {
+    display: inline-grid;
+    grid-gap: .7em;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    grid-template-areas:
+        "header header header header header"
+        "nav article article article article"
+        "nav article article article article"
+        "nav article article article article"
+        "nav article article article article"
+        "nav article article article article"
+        "nav article article article article"
+        "nav article article article article"
+        "nav ads ads ads ads"
+        "footer footer footer footer footer";
+}
+
+.box {
+    background: var(--bgcolor);
+}
+
+#header {
+    grid-area: header;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+#article {
+    grid-area: article;
+}
+
+#ads {
+    grid-area: ads;
+}
+
+#footer {
+    grid-area: footer;
+}

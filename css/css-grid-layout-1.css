@@ -5,6 +5,10 @@
     --yellow: #FCD733;
 }
 
+body {
+    margin: 0;
+}
+
 .container {
     display: inline-grid;
     grid-gap: .5em;
