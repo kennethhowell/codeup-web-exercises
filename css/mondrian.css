@@ -7,20 +7,22 @@
 
 .mondrain {
     display: inline-grid;
-    text-align: center;
+    /*text-align: center;*/
     height: 500px;
     width: 500px;
     /*grid-template: repeat(8, 1fr) / repeat(8, 1fr);*/
     grid-gap: 5px;
     background-color: black;
+    border: 6px solid black;
     grid-template-areas:
-        "boxblue boxblue boxred boxred boxred boxred boxred boxred"
-        "boxblue boxblue boxred boxred boxred boxred boxred boxred"
-        "boxyellow boxyellow boxred boxred boxred boxred boxred boxred"
-
-
-
-;
+        "blue1 blue1 red1 red1 red1 red1 red1 red1"
+        "blue1 blue1 red1 red1 red1 red1 red1 red1"
+        "yellow1 yellow1 red1 red1 red1 red1 red1 red1"
+        "yellow1 yellow1 white1 white1 white2 white2 white2 white2"
+        "yellow1 yellow1 white1 white1 white2 white2 white2 white2"
+        "white3 white3 white1 white1 yellow2 yellow2 yellow2 yellow2"
+        "white3 white3 white1 white1 yellow2 yellow2 yellow2 yellow2"
+        "red2 red2 blue2 blue2 blue2 blue2 blue2 blue2";
 }
 
 .boxred {
@@ -37,4 +39,40 @@
 
 .boxyellow {
     background: var(--yellow);
+}
+
+#blue1 {
+    grid-area: blue1;
+}
+
+#blue2 {
+    grid-area: blue2;
+}
+
+#red1 {
+    grid-area: red1;
+}
+
+#red2 {
+    grid-area: red2;
+}
+
+#white1 {
+    grid-area: white1;
+}
+
+#white2 {
+    grid-area: white2;
+}
+
+#white3 {
+    grid-area: white3;
+}
+
+#yellow1 {
+    grid-area: yellow1;
+}
+
+#yellow2 {
+    grid-area: yellow2;
 }
