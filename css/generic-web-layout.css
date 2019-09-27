@@ -8,11 +8,17 @@ body {
 
 a {
     display: inline-block;
-    padding: 2em;
+    padding: .5em 2em;
     margin: 0;
     text-decoration: none;
     color: white;
 }
+
+a:hover {
+    background-color: white;
+    color: black;
+}
+
 
 p {
     padding: 0;
