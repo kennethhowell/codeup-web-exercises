@@ -14,6 +14,11 @@ a {
     color: white;
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
 ul {
     list-style-type: none;
     display: flex;
@@ -21,16 +26,10 @@ ul {
     margin: 0;
 }
 
-nav {
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-}
-
 .container {
     display: grid;
     grid-gap: 0;
-    grid-template-columns: 10% 60% 30%;
+    grid-template-columns: 15% 60% 25%;
     height: 100vh;
     width: 100vw;
     grid-template-areas:
@@ -40,10 +39,6 @@ nav {
         "navside textcont container2"
         "navside textcont container2"
         "navside textcont container2"
-        "navside textcont container2"
-        "navside navnum navnum"
-        "navside navnum navnum"
-        "navside navnum navnum"
         "navside footer footer"
         "navside footer footer";
 }
@@ -65,27 +60,66 @@ nav {
 #textcont {
     display: grid;
     grid-area: textcont;
+    padding: .5em;
 }
 
-.container2 {
+.adscont {
     grid-area: container2;
+    display: inline-grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
 }
 
-#navnum {
-    grid-area: navnum;
+.ads {
+    padding: 1em;
+    margin: .5em;
+    border: 2px solid gray;
 }
 
 #footer {
-    grid-area: footer;
-
+   grid-area: footer;
 }
 
 #p1 {
     background-color: #0E0E0E;
     color: #FFFFFF;
+  padding: 2em 2em 2em 1em;
 }
 
 #p2 {
     background-color: #333333;
     color: #FFFFFF;
+    padding: 1em;
+}
+
+#navnum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+}
+
+#navnum li {
+    padding: 1em;
+    margin: .2em;
+}
+
+#navnum li:hover {
+    background-color: black;
+    color: white;
+}
+
+#navside {
+    padding: .5em;
+}
+
+#navside li {
+    padding: .3em 0 .3em 0;
+}
+
+#navside li:hover {
+    background-color: black;
+    color: white;
 }
