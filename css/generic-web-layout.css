@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 a {
@@ -19,6 +20,9 @@ a:hover {
     color: black;
 }
 
+h2 {
+    color: #419388;
+}
 
 p {
     padding: 0;
@@ -80,7 +84,7 @@ ul {
 
 .ads {
     padding: 1em;
-    margin: .5em;
+    margin: 1em;
     border: 2px solid gray;
 }
 
