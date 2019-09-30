@@ -4,7 +4,7 @@
 
 /* build for mobile */
 
-@media screen and (max-width: 768px) {
+@media screen {
 
     body {
         display: grid;
@@ -101,7 +101,7 @@
 
 /* desktop build */
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 992px) {
 
     .alert-info {
         display: none;
@@ -114,7 +114,7 @@
         display: grid;
         grid-template-columns: 30% 30% 40%;
         grid-template-areas:
-            "h1 h1 nav"
+            "h1 nav nav"
             "header-img header-img header-img"
             "header-img header-img header-img"
             "main main sub-section"
@@ -124,27 +124,42 @@
 
     h1 {
         grid-area: h1;
+        text-align: left;
+        padding-left: .6em;
     }
 
     nav {
         grid-area: nav;
-        margin-left: auto;
+        margin-right: 0;
     }
 
     .nav-links {
         list-style: none;
         display: flex;
+        /*justify-content: flex-end;*/
     }
 
     .nav-links li {
-        padding: 1em;
+        padding: 1em .5em;
+        background-color: white;
     }
 
     .header-img {
         grid-area: header-img;
-        height: 395px;
+        height: 385x;
         width: 890px;
     }
+
+    .header-img img {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    /*.header-img img {*/
+    /*    height: 100%;*/
+    /*    width: 100%;*/
+    /*}*/
 
     section {
         margin-bottom: 15em;
@@ -168,7 +183,6 @@
         display: inline-grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        /*margin: 0 auto;*/
         font-size: medium;
     }
 
