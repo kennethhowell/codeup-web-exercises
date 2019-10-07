@@ -4,7 +4,7 @@ console.log("Hello from Javascript!");
 
 alert("Welcome to my website");
 
-var favcolor= prompt("What is your favorite color?");
+var favcolor = prompt("What is your favorite color?");
 
 alert("Great, " + favcolor + " is my favorite color too!");
 
@@ -49,7 +49,7 @@ alert("Good news, you've got enough! Thanks for working " + GoogleWorked + " hou
 var classtime =  9;
 var classsize = 125;
 
-var classtimeUser = parseInt(prompt("A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with their current schedule. Our class starts at 9AM, what time is your earliest class? Please answer with a number." ));
+var classtimeUser = parseInt(prompt("A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with their current schedule. This class starts at 9AM, what time is your earliest class for that day? Please answer with a number." ));
 var classsizeUser = parseInt(prompt("So that's when your earliest class is - class sizes max out at 125, how many people are in the class you're interested in?"));
 
 var studentCanSignUp = classsizeUser < classsize && classtime !== classtimeUser;
@@ -67,8 +67,6 @@ alert("Let's see if we can save you some money on your classes before you go!");
 var offerCurrent = true;
 var premiumMem =  parseInt(prompt("How many months have you been a premium member with our institution? Please put in 0 if you're not yet a premium membership holder."));
 var shoppingcart = parseInt(prompt("How many classes are you looking to register for with us?"));
-
-
 
 var discountCheck = offerCurrent && (shoppingcart > 2 || premiumMem >= 1);
 
