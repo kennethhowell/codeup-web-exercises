@@ -94,15 +94,15 @@ function analyzeColor (input) {
 
 }
 
-console.log(analyzeColor("red"));
-console.log(analyzeColor("orange"));
-console.log(analyzeColor("yellow"));
-console.log(analyzeColor("green"));
-console.log(analyzeColor("blue"));
-console.log(analyzeColor("indigo"));
-console.log(analyzeColor("violet"));
-console.log(analyzeColor("pink"));
-console.log(analyzeColor("navy"));
+// console.log(analyzeColor("red"));
+// console.log(analyzeColor("orange"));
+// console.log(analyzeColor("yellow"));
+// console.log(analyzeColor("green"));
+// console.log(analyzeColor("blue"));
+// console.log(analyzeColor("indigo"));
+// console.log(analyzeColor("violet"));
+// console.log(analyzeColor("pink"));
+// console.log(analyzeColor("navy"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -117,10 +117,39 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 
+// console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
+// switch(randomColor) {
+//     case "red":
+//         alert("Red is the color of firetrucks.");
+//         break;
+//     case "orange":
+//         alert("The Orange dynasty was quite famous in Europe.");
+//         break;
+//     case "yellow":
+//         alert("Yellow bananas are riper and tasty.");
+//         break;
+//     case "green":
+//         alert("Green grass is desired for many landscaped lawns.");
+//         break;
+//     case "blue":
+//         alert("Blue skies over Texas are the best.");
+//         break;
+//     case "indigo":
+//         alert("Indigo is a very beautiful color linked to royalty.");
+//         break;
+//     case "violet":
+//         alert("Violets grow wildly in the springtime");
+//         break;
+//     default:
+//         alert(input + "? I don't know much about " + input + ".");
+//         break;
+// }
 
 /**
  * TODO:
@@ -128,6 +157,11 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+//
+// var colorChoice = prompt("Give me a color that you like!");
+// alert(analyzeColor(colorChoice));
+
 
 /* ########################################################################## */
 
@@ -151,6 +185,29 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+function calculateTotal (x , y) {
+    if (x == 0) {
+        return y;
+    } else if (x == 1) {
+        return y - (y * .10);
+    } else if (x == 2) {
+        return y - (y * .25);
+    } else if (x == 3) {
+        return y - (y * .35);
+    } else if (x == 4) {
+        return y / 2;
+    } else {
+        return y - y;
+    }
+}
+
+// console.log(calculateTotal(0, 100));;
+// console.log(calculateTotal(1, 100));;
+// console.log(calculateTotal(2, 100));;
+// console.log(calculateTotal(3, 100));;
+// console.log(calculateTotal(4, 100));;
+// console.log(calculateTotal(5, 100));;
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -159,4 +216,22 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var totalprice = prompt("Thank you for shopping at Wal-Mart! How much was your bill today?");
+var discountprice = calculateTotal(luckyNumber, totalprice);
+
+if (luckyNumber == 0) {
+    alert("Bzzt, I'm sorry your lucky number was " + luckyNumber + " meaning you did not get a discount today! Your total is $" + totalprice);
+        } else if (luckyNumber == 1) {
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+        } else if (luckyNumber == 2) {
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+        } else if (luckyNumber == 3) {
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+        } else if (luckyNumber == 4) {
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+        } else if (luckyNumber == 5) {
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+}
+
