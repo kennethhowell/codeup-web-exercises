@@ -16,6 +16,34 @@
  * Can you refactor your code to use functions?
  */
 
+// var numbertime = confirm("Would you like to enter a number?");
+//
+// if (numbertime) {
+//     var usernum = parseInt(prompt("Great! I like numbers. What's your number?"));
+//         if (isNaN(usernum)) {
+//             alert("That's not a number, buddy!")
+//         } else {
+//             var plusHundred = usernum + 100;
+//             var posinegiNum = usernum > 0;
+//             var evenodduserNum = usernum % 2;
+//             if (evenodduserNum == 0) {
+//                 alert("Your number is even, buddy!");
+//             } else {
+//                 alert("Your number is odd, pal!");
+//             }
+//
+//             alert("Did you know if you added 100 to your number it would be " + plusHundred + ".");
+//
+//             if (posinegiNum) {
+//                 alert("By the way, your number is positive!");
+//             } else {
+//                 alert("FYI, you've got a negative number.");
+//             }
+//         }
+// } else {
+//     alert("I'm sorry to hear that. No numbers for us today");
+// }
+
 /* ########################################################################## */
 
 /**
@@ -35,6 +63,46 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+
+function analyzeColor (input) {
+    if (input == "red") {
+        return "Red is the color of firetrucks.";
+    }
+    else if (input == "orange") {
+        return "The Orange dynasty was quite famous in Europe.";
+    }
+    else if (input == "yellow") {
+        return "Yellow bananas are riper and tasty.";
+    }
+    else if (input == "green")
+    {
+        return "Green grass is desired for many landscaped lawns.";
+    }
+    else if (input == "blue") {
+        return "Blue skies over Texas are the best.";
+    }
+    else if (input == "indigo") {
+        return "Indigo is a very beautiful color linked to royalty.";
+    }
+
+    else if (input == "violet") {
+        return "Violets grow wildly in the springtime"
+    }
+    else {
+        return input + "? I don't know much about " + input + ".";
+    }
+
+}
+
+console.log(analyzeColor("red"));
+console.log(analyzeColor("orange"));
+console.log(analyzeColor("yellow"));
+console.log(analyzeColor("green"));
+console.log(analyzeColor("blue"));
+console.log(analyzeColor("indigo"));
+console.log(analyzeColor("violet"));
+console.log(analyzeColor("pink"));
+console.log(analyzeColor("navy"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
