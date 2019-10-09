@@ -425,22 +425,22 @@ switch(trafficcolor) {
     default:
         alert(trafficcolor + ", huh? Be cautious with that.");
 }
-
-================ REVERSE ENGINEERING =================
-Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
-
-
-1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
-
-// confirm or form of input statement adds 5 to the default or returns 5 as default
-
-2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
-
-// if else statements returning different messages
-
-3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
-
-// if else or ternary for black/white bg
+//
+// ================ REVERSE ENGINEERING =================
+// Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
+//
+//
+// 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
+//
+// // confirm or form of input statement adds 5 to the default or returns 5 as default
+//
+// 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
+//
+// // if else statements returning different messages
+//
+// 3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
+//
+// // if else or ternary for black/white bg
 
 //
 //     var checkBox = document.querySelector('input');
