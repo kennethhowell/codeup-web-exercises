@@ -120,6 +120,22 @@ function greaterFiveprompt () {
     var userNumber = parseInt(prompt("Please enter a number"));
     return userNumber > 5;
 }
+
+<!--write js function that returns hello there stranger alert return
+refactor to hello there concatenated to argument prompt input string, call, alert return-->
+
+<!--function helloStranger () {-->
+<!--    return alert("Hello there, stranger!");-->
+<!--}-->
+
+function helloThere (input = "stranger") {
+    return alert("Hello there " + input + "!");
+};
+
+var nametag = prompt("What's your name, buddy?");
+alert helloThere(nametag);
+
+
 </body>
 
 
