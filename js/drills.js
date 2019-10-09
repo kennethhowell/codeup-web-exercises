@@ -51,10 +51,10 @@ function addFive(input){
     return sumup;
 }
 
-console.log(addFive(1));
-console.log(addFive(2));
-console.log(addFive(3));
-console.log(addFive(4));
+// console.log(addFive(1));
+// console.log(addFive(2));
+// console.log(addFive(3));
+// console.log(addFive(4));
 
 //     Make a function named isMultipleOfFive(input)
 function isMultipleOfFive(input) {
@@ -127,46 +127,297 @@ function isTrue(boolean){
 // console.log(isTrue("1"));
 
 // Make a function named isFalse(boolean)
-function isFalse(boolean) {
-    var nottrue = boolean && true;
-    return !nottrue;
-}
-
-console.log(isFalse(true));
-console.log(isFalse(false));
-console.log(isFalse(1));
-console.log(isFalse("maybe"));
+// function isFalse(boolean) {
+//     var nottrue = boolean && true;
+//     return !nottrue;
+// }
+//
+// console.log(isFalse(true));
+// console.log(isFalse(false));
+// console.log(isFalse(1));
+// console.log(isFalse("maybe"));
 
 // Make a function named isTruthy(input), remember that values other than true will behave like true
-function isTruthy(input){
+// function isTruthy(truthy){
+//     switch(truthy){
+//         case true:
+//             return "truthy";
+//         case false:
+//             return "false";
+//         default:
+//             break;
+//     }
+// }
+//
+// console.log(isTruthy(0));
 
-}
+// function truthyOrFalsy(a) {
+//     return a ? "truthy" : "falsy";
+// }
+
+// function isTruthy (truthy) {
+//     if (truthy) {
+//         return "truthy";
+//     } else {
+//         return "falsy";
+//     }
+
+// }
+//
+// console.log(isTruthy(1));
+// console.log(isTruthy(0));
+// console.log(isTruthy(10 == 5));
+
+
 // Make a function named isFalsy(input), remember that values other than false behave like false
+// function isFalsy (falsy) {
+//     if (!falsy) {
+//         return "falsy";
+//     } else {
+//         return "truthy";
+//     }
+//
+// }
+//
+//
+// console.log(isFalsy(0));
+// console.log(isFalsy(1));
+// console.log(isFalsy(10 == 5));
 // Make a function named isVowel(letter)
+function isVowel(letter) {
+    var returnMessage;
+    switch(letter) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            returnMessage = "This is a vowel!";
+            break;
+        default:
+            returnMessage = "This is not a vowel.";
+    }
+    return returnMessage;
+}
+// alert(isVowel("a"));
+// alert(isVowel("y"));
+// alert(isVowel(1));
+
 // Make a function named isConsonant(letter)
+function isConsonant(letter) {
+    var returnMessage;
+    switch(letter) {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            returnMessage = "This is not a consonant!";
+            break;
+        default:
+            returnMessage = "This is a consonant.";
+    }
+    return returnMessage;
+}
+
+// alert(isConsonant("r"));
+// alert(isConsonant("t"));
+// alert(isConsonant("a"));
+// alert(isConsonant("e"));
+
 // Make a function named isCapital(letter)
+function isCapital(letter) {
+    var uppercasecheck = (letter == letter.toUpperCase());
+    return uppercasecheck;
+}
+
+// alert(isCapital("U"));
+// alert(isCapital("u"));
+// alert(isCapital("a"));
+
 // Make a function named isLowerCase(letter)
+function isLowerCase(letter) {
+    var lowercasecheck = (letter != letter.toUpperCase());
+    return lowercasecheck;
+}
+
+// console.log(isLowerCase("a"));
+// console.log(isLowerCase("b"));
+// console.log(isLowerCase("C"));
+// console.log(isLowerCase("D"));
+
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+function hasLowerCase(str) {
+    return str.toUpperCase() != str;
+}
+
+// alert(hasLowerCase("A QUICK BROWN FOx"));
+// alert(hasLowerCase("A QUICK BROWN FOX"));
+
 // Make a function named isSpace(letter) that returns if a character is a space character
+function isSpace(input) {
+    return (input == " ");
+}
+
+// console.log(isSpace(prompt("you know what to do")));
+// console.log(isSpace(prompt("you know what to do")));
+// console.log(isSpace(prompt("you know what to do")));
+
 // Make a function named isZero(number)
+function isZero(num) {
+    var checkZero = parseInt(num);
+    return checkZero === 0;
+}
+
+// console.log(isZero(prompt("gimme some numbers")));
+// console.log(isZero(prompt("gimme some numbers")));
+// console.log(isZero(prompt("gimme some numbers")));
+
 // Make a function named notZero(input) that returns true if the input is not zero
+function notZero(num){
+    var checkZero = parseInt(num);
+    return checkZero !== 0;
+}
+
+// console.log(notZero(prompt("gimme some numbers")));
+// console.log(notZero(prompt("gimme some numbers")));
+// console.log(notZero(prompt("gimme some numbers")));
+
+
 // Write a function named lowerCase(string)
+function lowerCase(string) {
+    var returnMessage = string.toLowerCase();
+    return returnMessage;
+}
+
+// console.log(lowerCase("LOWERCASE LOWERCASE LOWERCASE"));
+// console.log(lowerCase("LOWERCASE LOWERCASE LOWERCASE"));
+// console.log(lowerCase("LOWERCASE LOWERCASE LOWERCASE"));
+
 // Write a function named double(n) that returns a number times two
+function double(n) {
+    return n * 2;
+}
+
+// console.log(double(2));
+
 // Write a function named triple(n) that returns a number times 3
+function triple(n){
+    return n * 3;
+}
+
+
 // Write a function named quadruple(n) that returns a number times 4
+function quadruple(n){
+    return n * 4;
+}
+
+
 // Write a function named half(n) that returns 1/2 of the provided input
+function half(n){
+    return n / 2;
+}
+
+
 // Write a function named subtract(a, b) that returns a minus b
+function subtract(a , b){
+    return a - b;
+}
 // Write a function named multiply(a, b) that returns the product of a times b
+function multiply(a , b){
+    return a * b;
+}
+
 // Write a function named divide(a, b) that returns a divided by b
+function divide(a , b){
+    return a / b;
+}
+
+
+
 // Write a function named remainder(a, b) that returns the remainder after dividing a by b
+function remainder(a , b){
+    return a % b;
+}
+
+
 // Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
+function modulo(a , b){
+    return (remainder(a , b));
+}
+
+
+// console.log(modulo(6, 3));
+// console.log(modulo(7, 3));
+// console.log(remainder(6, 3));
+// console.log(remainder(7, 3));
+
+
 // Write a function named cube(n) that returns n * n * n
+function cube(n){
+    var number = n * n * n;
+    return number;
+}
+
+
+
 // Write a function named squareRoot(n) that returns the square root of the input
+function squareRoot(n){
+    var rooted = Math.sqrt(n);
+    return rooted;
+}
+
+// console.log(squareRoot(9));
+// console.log(squareRoot(36));
+// console.log(squareRoot(25));
+
 // Write a function named cubeRoot(n) that returns the cube root of the input
+function cubeRoot(n){
+    var cubed = Math.cbrt(n);
+    return cubed;
+}
+
+
+// console.log(cubeRoot(125));
+// console.log(cubeRoot(27));
+// console.log(cubeRoot(8));
+
+
 // Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+function invertSign(number){
+    var inverted = number * -1;
+    return inverted;
+}
+
+// console.log(invertSign("string"));
+// console.log(invertSign(5));
+// console.log(invertSign(-5));
+
+
 // Write a function named degreesToRadians(number)
+function degreesToRadians(number){
+    var radianResult = number * (Math.PI / 180);
+    return radianResult;
+}
+
+
 // Write a function named radiansToDegrees(number)
+function radiansToDegrees(number){
+    var degreesDecree = number * (180 / Math.PI);
+    return degreesDecree;
+}
+
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
+function isBlank(input){
+    var blankResult = (input !== input.trim());
+    return blankResult;
+}
+
+console.log(isBlank("        "));
+console.log(isBlank("      waldo  "));
+console.log(isBlank("waldo"));
+
+
 //     Make a function named trim(string) that removes empty spaces before and after the input.
 //     Make a function named areEqual(input1, input2) that returns if both inputs have the same value
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
