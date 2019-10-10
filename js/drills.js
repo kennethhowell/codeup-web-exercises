@@ -577,40 +577,218 @@ function addThree(num){
 //
 //     Make a function called sayString() which returns the string input passed in.
 // Test this function with console.log(sayString('codeup'))
+function sayString(str){
+    var returnMessage = str.toString();
+    return returnMessage;
+}
+
+// console.log(sayString("codeup"));
+// console.log(sayString(5));
+// console.log(sayString(Infinity));
+
+
 //
 //     Challenge Function Drills
 // Write a function called identity(input) that takes in an argument called input and returns that input.
+// function identity(input){
+//     var returnMessage = input;
+//     return returnMessage;
+//
+// }
+//
+// console.log(identity(5));
+// console.log(identity("5"));
+// console.log(identity(true));
+
+
 //
 //     Write a function called getRandomNumber(min, max) that returns a random number between min and max values sent to that function call.
 //
+
+// function getRandomNumber(min, max) {
+//     var returnMessage = Math.floor(Math.random() * (parseInt(max) - parseInt(min) + 1)) + parseInt(min);
+//     return returnMessage;
+// }
+//
+// console.log(getRandomNumber(1, 10));
+// console.log(getRandomNumber(1, 10));
+// console.log(getRandomNumber(1, 10));
+
+
 // Write a function called first(input) that returns the first character in the provided string.
+// function first(input){
+//     var returnMessage = input[0];
+//     return returnMessage;
+// }
+//
+// console.log(first("first"));
+// console.log(first("second"));
+// console.log(first("third"));
+
+
 //
 //     Write a function called last(input) that returns the last character of a string
+// function last(input){
+//     var returnMessage = input[input.length - 1];
+//     return returnMessage;
+// }
+//
+// console.log(last("last"));
+// console.log(last("did not finish"));
+// console.log(last("disqualified"));
 //
 // Write a function called rest(input) that returns everything but the first character of a string.
+function rest(input){
+    var returnMessage = input.slice(1);
+    return returnMessage;
+}
+
 //
+// console.log(rest("Aaron"));
+// console.log(rest("San Antonio"));
+// console.log(rest("Ssizzurp"));
+// //
 //     Write a function called reverse(input) that takes a string and returns it reversed.
+function reverse(input){
+    var returnMessage = input.split("").reverse().join("");
+    return returnMessage;
+}
+
+// console.log(reverse("amanaplanacanalpanama"));
+// console.log(reverse("ydwoH"));
+// console.log(reverse("Hello"));
+
+
+
+
 //
 //     Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric.
 //
+// function isNumeric(input) {
+//     var returnMessage = isNaN(input);
+//     return returnMessage;
+// }
+
+// function isNumeric(input){
+//     return typeof input === "number";
+// }
+//
+// console.log(isNumeric(6));
+// console.log(isNumeric("6"));
+// console.log(isNumeric(true));
+//
 //     Write a function called count(input) that takes in a string and returns the number of characters.
+
+// function count(input){
+//     var returnMessage = input.length;
+//     return returnMessage;
+// }
+//
+// console.log(count("four"));;
+// console.log(count("four and four"));;
+// console.log(count("0"));;
+
 //
 //     Write a function called add(a, b) that returns the sum of a and b
+function add(a , b){
+    var returnMessage = parseFloat(a) + parseFloat(b);
+    return returnMessage;
+}
+//
+// console.log(add(2, 5));
+// console.log(add(2, 6));
+// console.log(add(2, 7));
+// console.log(add(2, "three"));
+
 //
 // Write a function called subtract(a, b) that return the difference between the two inputs.
+function subtract(a , b){
+    var returnMessage = parseFloat(a) - parseFloat(b);
+    return returnMessage;
+}
+
+// console.log(subtract(10, 5));
+// console.log(subtract(12, 6));
+// console.log(subtract(14, 7));
+// console.log(subtract(6, "three"));
+
+
 //
 //     Write multiply(a, b) function that returns the product
+function multiply(a , b){
+    var returnMessage = parseFloat(a) * parseFloat(b);
+    return returnMessage;
+}
+
+// console.log(multiply(2, 5));
+// console.log(multiply(2, 6));
+// console.log(multiply(2, 7));
+// console.log(multiply(2, "three"));
+
 //
 // Write a divide(numerator, denominator) function that returns a divided by b
+function divide(numerator, denominator){
+    var returnMessage = parseFloat(numerator) / parseFloat(denominator);
+    return returnMessage;
+}
+
+
+// console.log(divide(10, 5));
+// console.log(divide(18, 6));
+// console.log(divide(28, 7));
+// console.log(divide(9, "three"));
+
 //
 // Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
+function remainder(number, divisor){
+    var returnMessage = parseFloat(number) % parseFloat(divisor);
+    return returnMessage;
+}
+
+// console.log(remainder(6, 2));
+// console.log(remainder(7, 2));
+// console.log(remainder(10, 3));
+
+
 //
 // Write the function square(a) that takes in a number and returns the number multiplied by itself.
+function square(a){
+    var parsed = parseFloat(a);
+    var returnMessage = parsed * parsed;
+    return returnMessage;
+}
+
+// console.log(square(2));
+// console.log(square(3));
+// console.log(square(4));
+// console.log(square(true));
+// console.log(square("six"));
+
 //
 //     Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
+// function sumOfSquares(a , b){
+//     var squareA = square(a);
+//     var squareB = square(b);
+//     var returnMessage = add(squareA, squareB)
+//     return returnMessage;
+// }
+//
+// console.log(sumOfSquares(2, 2));;
+// console.log(sumOfSquares(4, 4));;
+// console.log(sumOfSquares(3, 4));;
+
+
 //
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
 //
+// ======== david taking a look at this ===========
+// function doMath(operator, a, b) {
+//     var returnMessage = parseFloat(operator + "("+ a + "," + b + ')');
+//     return returnMessage;
+// }
+//
+// console.log(doMath("subtract", 10, 2));
+
 // Even More Function Bonuses
 // Create a function that will return how many whitespace characters are at the beginning and end of a string.
 //
