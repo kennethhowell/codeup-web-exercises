@@ -508,11 +508,24 @@ function reverseString(string){
 // Make a function named absoluteValue(number) that returns the absolute value of a number.
 
 function absoluteValue(number) {
-
+    var returnMessage = Math.abs(number);
+    return returnMessage
 }
 
 
 //     Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+function rollDice (sides) {
+    var parsed =  parseInt(sides);
+    var bonesrolled = Math.floor(Math.random() * (parsed - 1 + 1) ) + 1;
+    return bonesrolled;
+}
+
+console.log(rollDice(6));
+console.log(rollDice(8));
+console.log(rollDice(12));
+console.log(rollDice(1));
+
+
 //     Simple Function Drills
 // Make a function called returnTwo() that returns the number 2 when called
 // Test this function with console.log(returnTwo())
