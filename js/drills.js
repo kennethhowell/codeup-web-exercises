@@ -409,24 +409,109 @@ function radiansToDegrees(number){
 
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
 function isBlank(input){
-    var blankResult = (input !== input.trim());
-    return blankResult;
+    var blankResult = input.trim();
+    return !(blankResult.length > 0);
 }
 
-console.log(isBlank("        "));
-console.log(isBlank("      waldo  "));
-console.log(isBlank("waldo"));
+// console.log(isBlank("        "));
+// console.log(isBlank("      waldo  "));
+// console.log(isBlank("waldo"));
+// console.log(isBlank("                       . "));
+// console.log(isBlank("                                                                                   " +
+//     " "));
 
 
 //     Make a function named trim(string) that removes empty spaces before and after the input.
+function trim(string) {
+    var returnMessage = string.trim();
+    return returnMessage;
+}
+
+// console.log(trim("waldo"));
+// console.log(trim(" waldo "));
+// console.log(trim(" waldo    "));
+// console.log(trim("  waldo "));
+// console.log(trim("      waldo "));
+// console.log(trim(" waldo        "));
+
+
 //     Make a function named areEqual(input1, input2) that returns if both inputs have the same value
+function areEqual (input1 , input2) {
+    var returnMessage = input1 == input2;
+    return returnMessage;
+}
+
+// console.log(areEqual(5, 5));
+// console.log(areEqual(5, "5"));
+// console.log(areEqual("waldo", "waldo"));
+// console.log(areEqual("waldo", "where is"));
+
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
+function areIdentical(input1 , input2) {
+    var returnMessage = input1 === input2;
+    return returnMessage;
+}
+
+// console.log(areIdentical(5, 5));
+// console.log(areIdentical(5, "5"));
+// console.log(areIdentical("waldo", "waldo"));
+// console.log(areIdentical("waldo", "where is"));
+
 //     Make a function named not(input) returns the input with a flipped boolean
+function not(input) {
+    var returnMessage = !input;
+    return returnMessage;
+}
+
+// console.log(not(true));
+// console.log(not(false));
+
 // Make a function named notNot(input) that the negation of the negation of the input.
+function notNot(input) {
+    var returnMessage = !(not(input));
+    return returnMessage;
+}
+// console.log(notNot(true));
+// console.log(notNot(false));
+
 //     Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+function and(predicate1 , predicate2) {
+    var returnMessage = predicate1 && predicate2;
+    return returnMessage;
+}
+
+// console.log(and(true, true));
+// console.log(and(true, false));
+
 // Make a function named or(predicate1, predicate2) that returns the logical operation of OR
+function or(predicate1, predicate2) {
+    var returnMessage = predicate1 || predicate2;
+    return returnMessage;
+}
+
+// console.log(or(true, false));
+// console.log(or(false, false));
+// console.log(or(true, true));
+
+
 // Write a function called reverseString(string) that reverses a string
+function reverseString(string){
+    var returnMessage = string.split("").reverse().join("");
+    return returnMessage;
+}
+
+// console.log(reverseString("hello"));
+// console.log(reverseString("ydwoH"));
+// console.log(reverseString("amanaplanacanalpanama"));
+
+
 // Make a function named absoluteValue(number) that returns the absolute value of a number.
+
+function absoluteValue(number) {
+
+}
+
+
 //     Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
 //     Simple Function Drills
 // Make a function called returnTwo() that returns the number 2 when called
