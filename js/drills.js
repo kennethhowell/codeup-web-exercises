@@ -781,13 +781,13 @@ function square(a){
 //
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
 //
-// ======== david taking a look at this ===========
-// function doMath(operator, a, b) {
-//     var returnMessage = parseFloat(operator + "("+ a + "," + b + ')');
-//     return returnMessage;
-// }
-//
-// console.log(doMath("subtract", 10, 2));
+
+function doMath(operator, a, b) {
+    var returnMessage = operator(a , b);
+    return returnMessage;
+}
+
+console.log(doMath(subtract, 10, 2));
 
 // Even More Function Bonuses
 // Create a function that will return how many whitespace characters are at the beginning and end of a string.
