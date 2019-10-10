@@ -123,7 +123,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-
+//
 // switch(randomColor) {
 //     case "red":
 //         alert("Red is the color of firetrucks.");
@@ -150,6 +150,31 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //         alert(input + "? I don't know much about " + input + ".");
 //         break;
 // }
+
+// console.log(randomColor);
+//
+// function switchAnalyzeColor(input) {
+//     switch(input) {
+//         case "red":
+//             return alert("Red is the color of firetrucks.");
+//         case "orange":
+//             return alert("The Orange dynasty was quite famous in Europe.");
+//         case "yellow":
+//             return alert("Yellow bananas are riper and tasty.");
+//         case "green":
+//             return alert("Green grass is desired for many landscaped lawns.");
+//         case "blue":
+//             return alert("Blue skies over Texas are the best.");
+//         case "indigo":
+//             return alert("Indigo is a very beautiful color linked to royalty.");
+//         case "violet":
+//             return alert("Violets grow wildly in the springtime");
+//         default:
+//             return alert(input + "? I don't know much about " + input + ".");
+//     }
+// }
+//
+// switchAnalyzeColor(randomColor);
 
 /**
  * TODO:
@@ -218,20 +243,20 @@ function calculateTotal (x , y) {
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
 
-var totalprice = prompt("Thank you for shopping at Wal-Mart! How much was your bill today?");
+var totalprice = parseFloat(prompt("Thank you for shopping at Wal-Mart! How much was your bill today?"));
 var discountprice = calculateTotal(luckyNumber, totalprice);
 
 if (luckyNumber == 0) {
     alert("Bzzt, I'm sorry your lucky number was " + luckyNumber + " meaning you did not get a discount today! Your total is $" + totalprice);
         } else if (luckyNumber == 1) {
-            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice.toFixed(2));
         } else if (luckyNumber == 2) {
-            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice.toFixed(2));
         } else if (luckyNumber == 3) {
-            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice.toFixed(2));
         } else if (luckyNumber == 4) {
-            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice.toFixed(2));
         } else if (luckyNumber == 5) {
-            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice);
+            alert("Congratulations! Your lucky number was " + luckyNumber + " earning you a discount. Instead of paying $" + totalprice + " , I'm happy to say your discounted total today is $" + discountprice.toFixed(2));
 }
 
