@@ -520,28 +520,60 @@ function rollDice (sides) {
     return bonesrolled;
 }
 
-console.log(rollDice(6));
-console.log(rollDice(8));
-console.log(rollDice(12));
-console.log(rollDice(1));
+// console.log(rollDice(6));
+// console.log(rollDice(8));
+// console.log(rollDice(12));
+// console.log(rollDice(1));
 
 
 //     Simple Function Drills
 // Make a function called returnTwo() that returns the number 2 when called
 // Test this function with console.log(returnTwo())
+function returnTwo() {
+    var returnMessage = 2;
+    return returnMessage;
+}
+
+
+// console.log(returnTwo());
+
 //
 //     Make a function called sayHowdy() which console.logs the string “Howdy!”
+function sayHowdy(){
+    var returnMessage = "Howdy!";
+    return returnMessage;
+}
+
+// console.log(sayHowdy());
+
 //
 // Test this function by directly calling sayHowdy()
 //
 // Remember this function does not need a defined return value
 //
 // Make a function called returnName() that returns the string of your name
+function returnName(){
+    var returnMessage = "Kenneth";
+    return returnMessage;
+}
+
+// console.log(returnName());
+
 //
 // Test this function with console.log(returnName())
 //
 //     Make a function called addThree() which takes in a number input and returns the number plus 3.
 // Test this function with console.log(addThree(5))
+function addThree(num){
+    var returnMessage = num + 3;
+    return returnMessage;
+}
+
+// console.log(addThree(5));
+// console.log(addThree(10));
+// console.log(addThree(15));
+
+
 //
 //     Make a function called sayString() which returns the string input passed in.
 // Test this function with console.log(sayString('codeup'))
