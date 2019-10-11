@@ -148,6 +148,38 @@ alert helloThere(nametag);
 <!--arrayLength(food);-->
 
 
+<!-- write js function that returns quotienet of two numbers but only when passed two numbers = all other cases === false -->
+
+function quotientReturn(num1, num2){
+var returnMessage = parseInt(num1) / parseInt(num2);
+return returnMessage;
+}
+
+console.log(quotientReturn("nine", 3));
+console.log(quotientReturn(9, 3));
+console.log(quotientReturn(true, 0));
+console.log(quotientReturn(12, 3));
+
+function conditionalquotientReturn(num1, num2){
+    if (typeof num1 !== "number" || typeof num2 !== "number"} {
+        return false} else {
+        var returnMessage = parseInt(num1) / parseInt(num2);
+        return returnMessage;}
+
+function conditionalReturn(num1, num2) {
+if (typeof num1 !== "number" || typeof num2 !== "number") {
+return false
+} else {
+var returnMessage = parseInt(num1) / parseInt(num2);
+return returnMessage;
+}
+}
+
+console.log(conditionalReturn("false", 3));
+console.log(conditionalReturn(9, 3));
+console.log(conditionalReturn("nine", 3));
+
+
 </body>
 
 
