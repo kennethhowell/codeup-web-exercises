@@ -787,17 +787,51 @@ function doMath(operator, a, b) {
     return returnMessage;
 }
 
-console.log(doMath(subtract, 10, 2));
+// console.log(doMath(subtract, 10, 2));
 
 // Even More Function Bonuses
 // Create a function that will return how many whitespace characters are at the beginning and end of a string.
+function whitespaceCount(string){
+    var trimstring = string.trim();
+    var number = string.length - trimstring.length;
+    return number;
+}
+
+// console.log(whitespaceCount("  two"));
+// console.log(whitespaceCount("  three "));
+// console.log(whitespaceCount("  four  "));
+// console.log(whitespaceCount("zero"));
+
+
 //
 //     Create a function that takes in two string inputs.
-//
 //     If the second string input is present in the first, return the first input string with the second input string removed from it.
+function stringsCheck(str1, str2) {
+    var removedstring = str1.replace(str2, "");
+    return removedstring;
+}
+
+// console.log(stringsCheck("the quick brown", "quick"));
+// console.log(stringsCheck("the quick brown", "quack"));
+// console.log(stringsCheck("the quick brown", " "));
+
 //     If the second string input is present multiple times in the first, the second string will only be removed where it first occurs in the first string.
+
 //     If the second string input is not present in the first, return the first string as entered in the function.
+
 // Create a function that takes in a string and returns true if the last letter is an "a" (otherwise, return false).
+function lastChar(str) {
+    var returnMessage = str.charAt(str.length-1) === "a";
+    return returnMessage;
+}
+
+console.log(lastChar("banana"));
+console.log(lastChar("bananas"));
+console.log(lastChar("bananas foster"));
+console.log(lastChar(true));
+console.log(lastChar(0));
+
+
 //
 // EXTRA CHALLENGE: create a function that will return how many whitespace characters are at the beginning of a string (hint: use regex).
 //
