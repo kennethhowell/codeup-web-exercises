@@ -183,16 +183,28 @@ console.log(conditionalReturn("nine", 3));
 <!-- write js function that takes in an array that has the length of five, console log each element-->
 
 
-function arrayReadOut(array) {
-console.log(array[0]);
-console.log(array[1]);
-console.log(array[2]);
-console.log(array[3]);
-console.log(array[4]);
+<!--function arrayReadOut(array) {-->
+<!--console.log(array[0]);-->
+<!--console.log(array[1]);-->
+<!--console.log(array[2]);-->
+<!--console.log(array[3]);-->
+<!--console.log(array[4]);-->
+<!--}-->
+
+
+<!--arrayReadOut(["apples", "bananas", "pears", "apricots", "peaches"]);-->
+
+
+<!-- write js function that takes in an input and return true if hte input is a string and at least eight characters in length, all other inputs false-->
+
+function stringChecker (string) {
+return string.length > 8 && typeof string === "string";
 }
 
-
-arrayReadOut(["apples", "bananas", "pears", "apricots", "peaches"]);
+console.log(stringChecker(8));
+console.log(stringChecker(true));
+console.log(stringChecker("mississippi"));
+console.log(stringChecker("four"));
 
 </body>
 
