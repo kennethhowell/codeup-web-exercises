@@ -179,7 +179,7 @@
     var books = [createBook("Cat's Cradle", "Kurt Vonnegut"), createBook("Raise High The Roof Beam, Carpenters", "J.D. Salinger"), createBook("On Writing", "Stephen King"), createBook("The North China Lover", "Margurite Duras"), createBook("Meditations", "Marcus Aurelius")]
 
     function showBookInfo(obj){
-        return obj.title + " is the title of this book, and it was written by " + obj.author
+      return  "\"" + obj.title + "\" is the title of this book, and it was written by " + obj.author
     }
 
     // console.log(showBookInfo(books[0]));
