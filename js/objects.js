@@ -49,21 +49,21 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    //
-    // // console.log(shoppers);
-    //
-    // shoppers.forEach(function(shopper) {
-    //     if (shopper.amount < 200) {
-    //         console.log(shopper.name + " , bad news, you needed to spend more than $200 dollars for our offer. You owe $" + shopper.amount);
-    //     } else {
-    //         console.log(shopper.name + ", congratulations! All purchases over $200 qualify for a 12% discount, your new total is $" + (shopper.amount - (shopper.amount * .12)).toFixed(2))
-    //     }
-    // })
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    // console.log(shoppers);
+
+    shoppers.forEach(function(shopper) {
+        if (shopper.amount < 200) {
+            console.log(shopper.name + ", you needed to spend more than $200 dollars for our offer. You owe $" + shopper.amount);
+        } else {
+            console.log(shopper.name + ", congratulations! All purchases over $200 qualify for a 12% discount, your new total is $" + (shopper.amount - (shopper.amount * .12)).toFixed(2) + " instead of $" + shopper.amount + ". You saved $" + (shopper.amount * .12).toFixed(2) + " today!")
+        }
+    })
 
 
 
