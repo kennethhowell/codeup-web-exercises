@@ -206,6 +206,21 @@ console.log(stringChecker(true));
 console.log(stringChecker("mississippi"));
 console.log(stringChecker("four"));
 
+<!-- write a js function that takes in float point number and returns number rounded down-->
+
+function roundDown(num) {
+var parsed = parseFloat(num);
+if (!isNaN(parsed)) {
+return Math.floor(num)
+} else {
+return false;
+}
+}
+
+console.log(roundDown("five"));
+console.log(roundDown(3.56));
+console.log(roundDown(6.7778));
+console.log(roundDown(true));
 </body>
 
 

@@ -14,3 +14,4 @@ function allIndexesOf (array, search) {
 console.log(allIndexesOf(fruits, "apple"));
 console.log(allIndexesOf(fruits, "guava"));
 console.log(allIndexesOf(fruits, "pineapple"));
+
