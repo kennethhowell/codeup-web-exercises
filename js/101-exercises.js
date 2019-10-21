@@ -1618,6 +1618,10 @@ const shoppingCart = {
 // Exercise 96
 // Write a function named getTaxRate that takes in the above shopping cart as input and returns the tax rate.
 // Hint: How do you access a key's value on a object? The tax rate is one key of the entire shoppingCart object.
+function getTaxRate(shoppingCart) {
+	return shoppingCart.tax;
+}
+
 
 assert(getTaxRate(shoppingCart), .08, "Exercise 96");
 addToDone("Exercise 96 is complete")
@@ -1625,8 +1629,11 @@ addToDone("Exercise 96 is complete")
 
 
 // Exercise 97
-// Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart. 
+// Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart.
 // We're not yet using the quantity of each item, but rather focusing on determining how many different types of items are in the cart.
+function numberOfItemTypes(shoppingCart) {
+	return shoppingCart.items.length;
+}
 
 assert(numberOfItemTypes(shoppingCart), 5, "Exercise 97");
 addToDone("Exercise 97 is complete.")
@@ -1636,6 +1643,15 @@ addToDone("Exercise 97 is complete.")
 // Exercise 98
 // Write a function named totalNumberOfItems that takes in the shopping cart as input and returns the total number all item quantities.
 // This should return the sum of all of the quantities from each item type
+function totalNumberOfItems(shoppingCart) {
+	var i;
+	var quantity = 0;
+	for (i = 0; i < shoppingCart.items.length; i++) {
+		quantity += shoppingCart.items[i].quantity;
+	} return quantity;
+}
+
+
 
 assert(totalNumberOfItems(shoppingCart), 17, "Exercise 98");
 addToDone("Exercise 98 is complete.")
