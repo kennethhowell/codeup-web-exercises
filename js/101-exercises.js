@@ -1,9 +1,14 @@
+"use strict"; // leave this line here :)
+
+// Welcome to 101 Exercises in JS
+// If you get "ReferenceError: someVariableName is not defined", that means you need to create a variable
+
 
 
 var doingJSRightNow = true;
 
 // The lines below will test your answer. If you see an error, then it means that your answer is incorrect or incomplete.
-assert(doingJSRightNow, true, "Exercise 0"); 
+assert(doingJSRightNow, true, "Exercise 0");
 addToDone("Exercise 0 is correct");
 
 
@@ -24,7 +29,7 @@ assert(fruits, ["mango", "banana", "guava", "kiwi", "strawberry"], "Exercise 2")
 addToDone("Exercise 2 is correct.");
 
 //  Exercise 3
-//  Create a variable named vegetables and assign it an array of fruits containing the following vegetable names as strings: 
+//  Create a variable named vegetables and assign it an array of fruits containing the following vegetable names as strings:
 //  eggplant, broccoli, carrot, cauliflower, and zucchini
 
 var vegetables = ["eggplant", "broccoli", "carrot", "cauliflower", "zucchini"]
@@ -41,7 +46,7 @@ addToDone("Exercise 4 is correct.");
 
 
 // Exercise 5
-// Add the string "tomato" to the end of the fruits array. 
+// Add the string "tomato" to the end of the fruits array.
 // *Hint* Recommend finding and using a built-in JS operation to add to an array rather than recreating the array.
 
 fruits.push ("tomato");
@@ -49,7 +54,7 @@ assert(fruits, ["mango", "banana", "guava", "kiwi", "strawberry", "tomato"], "Ex
 addToDone("Exercise 5 is correct");
 
 // Exercise 6
-// add the string "tomato" onto the end of the vegetables array. 
+// add the string "tomato" onto the end of the vegetables array.
 // Recommend using the built-in JS operation to add to an array.
 
 vegetables.push ("tomato");
@@ -58,7 +63,7 @@ addToDone("Exercise 6 is correct")
 
 
 // Exercise 7
-// Given the array of numbers defined below, reverse the array of numbers that you created above. 
+// Given the array of numbers defined below, reverse the array of numbers that you created above.
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 numbers.reverse();
@@ -87,7 +92,7 @@ addToDone("Exercise 9 is correct.")
 
 // Exercise 10
 // Write the code necessary to produce a single array that holds all fruits then all vegetables in the order as they were sorted above.
-// Assign the result to a variable named fruitsAndVeggies. 
+// Assign the result to a variable named fruitsAndVeggies.
 // *hint* the search engine search here would be "how to combine two arrays in JavaScript", for example.
 
 var fruitsAndVeggies = fruits.concat(vegetables);
@@ -277,8 +282,8 @@ function isPositiveEven(x) {
 	var remainder = (x % 2);
 	if (remainder == 1) {
 		return false;
-	} 
-	
+	}
+
 	if (x >= 0) {
 		return true;
 	}
@@ -715,7 +720,7 @@ addToDone("Exercise 44 is correct.")
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
 function countVowels(input) {
 	let vowelcount = input.match(/[aeiou]/gi);
-	
+
 	if (vowelcount) {
 		return vowelcount.length
 	} else {
@@ -747,7 +752,7 @@ addToDone("Exercise 46 is correct.")
 // Exercise 47
 // Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
 function startsWithVowel(input) {
-	    return ['a', 'e', 'i', 'o', 'u'].indexOf(input[0].toLowerCase()) !== -1
+	return ['a', 'e', 'i', 'o', 'u'].indexOf(input[0].toLowerCase()) !== -1
 }
 assert(startsWithVowel("ubuntu"), true, "Exercise 47");
 assert(startsWithVowel("banana"), false, "Exercise 47");
@@ -882,7 +887,7 @@ addToDone("Exercise 56 is correct.")
 function firstAndSecond (input) {
 	let first = input[0];
 	let second = input[1];
-	
+
 
 	return [first, second]
 }
@@ -968,7 +973,7 @@ function median (input) {
 
 	return median
 }
-	
+
 assert(median([1, 2, 3, 4, 5]), 3.0, "Exercise 62");
 assert(median([1, 2, 3]), 2.0, "Exercise 62");
 assert(median([1, 5, 6]), 5.0, "Exercise 62");
@@ -1110,7 +1115,7 @@ function hasEvens (input) {
 		return true
 	}
 
-	}
+}
 
 assert(hasEvens([1, 2, 3]), true, "Exercise 71");
 assert(hasEvens([2, 5, 6]), true, "Exercise 71");
@@ -1149,7 +1154,7 @@ function hasOdds (input) {
 		return true
 	}
 
-	}
+}
 
 assert(hasOdds([1, 2, 3]), true, "Exercise 73");
 assert(hasOdds([2, 5, 6]), true, "Exercise 73");
@@ -1177,9 +1182,9 @@ addToDone("Exercise 74 is correct.")
 // Exercise 75
 // Write a function definition named countNegatives that takes in sequence of numbers and returns a count of the number of negative numbers
 function countNegatives (input) {
-	let counter = 0; 
+	let counter = 0;
 	input.forEach (function (a) {
-		if (a < 0) 
+		if (a < 0)
 			counter++;
 	});
 	return counter;
@@ -1211,10 +1216,10 @@ addToDone("Exercise 76 is correct.")
 // Write a function definition named onlyPositiveEvens that takes in sequence of numbers and returns an array containing all the positive evens from the sequence
 function onlyPositiveEvens (input) {
 	let sortedinput = input.sort();
-	
+
 	let positivelist = sortedinput.filter(function(number){
 		return number > 0});
-	
+
 	let positiveevens = positivelist.filter(function(number){
 		return number % 2 == 0
 	});
@@ -1257,10 +1262,10 @@ addToDone("Exercise 78 is correct.")
 
 function onlyNegativeEvens (input) {
 	let sortedinput = input.sort();
-	
+
 	let negativelist = sortedinput.filter(function(number){
 		return number < 0});
-	
+
 	let negativeevens = negativelist.filter(function(number){
 		return number % 2 == 0
 	});
@@ -1281,7 +1286,7 @@ addToDone("Exercise 79 is correct.")
 function onlyNegativeOdds (input) {
 	let negativelist = input.filter(function(number){
 		return number < 0});
-	
+
 	let negativeodds = negativelist.filter(function(number){
 		return number % 2 != 0
 	});
@@ -1395,7 +1400,7 @@ addToDone("Exercise 86 is correct.")
 
 // Working with JS Objects
 
-// The following objects 
+// The following objects
 const tukeyPaper = {
 	"title": "The Future of Data Analysis",
 	"author": "John W. Tukey",
@@ -1457,8 +1462,8 @@ addToDone("Exercise 89 is complete.")
 // Exercise 90
 // Write a function named getBookAuthor that takes in a object (the above declared book variable) and returns the author's name
 function getBookAuthor (input) {
-	const {author} = input; 
-	return author;	
+	const {author} = input;
+	return author;
 }
 
 assert(getBookAuthor(book), "Frances Buontempo", "Exercise 90");
@@ -1466,7 +1471,7 @@ addToDone("Exercise 90 is complete.")
 
 
 // The next exercises work with a arrays of objects.
-// You'll see arrays of objects over and over again with data in a program. 
+// You'll see arrays of objects over and over again with data in a program.
 // Here is our arrays of objects.
 const books = [
 	{
@@ -1508,10 +1513,10 @@ function totalOfBookPrices (input) {
 	var sum=0;
 
 	for (var i=0;i<input.length;i++){
-   	sum+=input[i]["price"];
+		sum+=input[i]["price"];
 	}
-   
-   return sum
+
+	return sum
 }
 assert(totalOfBookPrices(books), 122.9, "Exercise 92")
 addToDone("Exercise 92 is complete.")
@@ -1523,10 +1528,10 @@ function getAverageBookPrice (input) {
 	var sum=0;
 
 	for (var i=0;i<input.length;i++){
-   	sum+=input[i]["price"];
+		sum+=input[i]["price"];
 	}
-   
-   return sum / 4
+
+	return sum / 4
 }
 
 assert(getAverageBookPrice(books), 30.725, "Exercise 93");
@@ -1548,7 +1553,6 @@ function highestPriceBook(input){
 	}
 
 }
-
 assert(highestPriceBook(books), {
 	"title": "The Visual Display of Quantitative Information",
 	"price": 38.00,
@@ -1575,6 +1579,7 @@ function lowestPriceBook(input){
 	return books.find(books => books.price === testagainst.price);
 
 }
+
 assert(lowestPriceBook(books), {
 	"title": "Weapons of Math Destruction",
 	"author": "Cathy O'Neil",
@@ -1618,19 +1623,18 @@ const shoppingCart = {
 // Exercise 96
 // Write a function named getTaxRate that takes in the above shopping cart as input and returns the tax rate.
 // Hint: How do you access a key's value on a object? The tax rate is one key of the entire shoppingCart object.
-function getTaxRate(shoppingCart) {
-	return shoppingCart.tax;
-}
-
 
 assert(getTaxRate(shoppingCart), .08, "Exercise 96");
 addToDone("Exercise 96 is complete")
 
-
+function getTaxRate(shoppingCart) {
+	return shoppingCart.tax;
+}
 
 // Exercise 97
 // Write a function named numberOfItemTypes that takes in the shopping cart as input and returns the number of unique item types in the shopping cart.
 // We're not yet using the quantity of each item, but rather focusing on determining how many different types of items are in the cart.
+
 function numberOfItemTypes(shoppingCart) {
 	return shoppingCart.items.length;
 }
@@ -1652,7 +1656,6 @@ function totalNumberOfItems(shoppingCart) {
 }
 
 
-
 assert(totalNumberOfItems(shoppingCart), 17, "Exercise 98");
 addToDone("Exercise 98 is complete.")
 
@@ -1661,6 +1664,15 @@ addToDone("Exercise 98 is complete.")
 // Exercise 99
 // Write a function named getAverageItemPrice that takes in the shopping cart as an input and returns the average of all the item prices.
 // Hint - This should determine the total price divided by the number of types of items. This does not account for each item type's quantity.\
+function getAverageItemPrice(shoppingCart) {
+	var i;
+	var price = 0;
+	for (i = 0; i < shoppingCart.items.length; i++) {
+		price += shoppingCart.items[i].price;
+	}
+	return price / shoppingCart.items.length;
+}
+
 
 assert(getAverageItemPrice(shoppingCart), 2.1420000000000003, "Exercise 99");
 addToDone("Exercise 99 is complete.")
@@ -1670,6 +1682,19 @@ addToDone("Exercise 99 is complete.")
 // Exercise 100
 // Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quanties times that item's price.
 // Hint: You may need to set an initial total price and total total quantity to zero, then sum up and divide that total price by the total quantity
+function getAverageSpentPerItem(shoppingCart){
+	var i;
+	var totalprice = 0;
+	var totalitems = 0;
+	for (i = 0; i < shoppingCart.items.length; i++){
+		totalitems += shoppingCart.items[i].quantity;
+		totalprice += (shoppingCart.items[i].price * shoppingCart.items[i].quantity);
+		console.log(totalprice);
+		console.log(totalitems);
+	}
+	return totalprice / totalitems;
+}
+
 
 assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
 addToDone("Exercise 100 is complete.")
@@ -1677,9 +1702,20 @@ addToDone("Exercise 100 is complete.")
 
 // Exercise 101
 // Write a function named mostSpentOnItem that takes in the shopping cart as input and returns the object associated with the item that has the highest price*quantity.
-// Be sure to do this as programmatically as possible. 
+// Be sure to do this as programmatically as possible.
 // Hint: Similarly to how we sometimes begin a function with setting a variable to zero, we need a starting place:
 // Hint: Consider creating a variable that is a object with the keys "price" and "quantity" both set to 0. You can then compare each item's price and quantity total to the one from "most"
+
+function mostSpentOnItem(shoppingCart){
+	var i;
+	var price = 0;
+	var quantity = 0;
+	var index = 0;
+	for (i = 0; i < shoppingCart.items.length; i++) {
+		price =
+	}
+}
+
 
 assert(mostSpentOnItem(shoppingCart), {
 	"title": "chocolate",
