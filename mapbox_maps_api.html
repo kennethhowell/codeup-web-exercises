@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mapbox mapbox m a p b o x</title>
+<!--    mapbox API  -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/mapbox-exer.css">
+
+</head>
+<body>
+
+<div id='map'></div>
+
+<!-- india palace 29.5219852,-98.5782075 -->
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaG93ZWxsa2VuIiwiYSI6ImNrMjI5dmNmazFoaHgzZHE4bjVuZzhxNXMifQ.vh0krUA6tKTlchlwOlta9Q';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 12,
+        center: [-98.4916, 29.4252]
+    });
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.4916, 29.4260])
+        .addTo(map);
+
+    // var alamoPopup = new mapboxgl.Popup()
+    //     .setHTML("<p>The Alamo</p>")
+    //     .addTo(map)
+    //
+    // marker.setPopup(alamoPopup)
+
+    var indiapalacemarker = new mapboxgl.Marker()
+        .setLngLat([-98.5782075, 29.5219852])
+        .addTo(map);
+
+    var indiapalacepopup = new mapboxgl.Popup()
+        .setHTML("India Palace")
+        .addTo(map);
+
+    indiapalacemarker.setPopup(indiapalacepopup);
+
+</script>
+</body>
+</html>
