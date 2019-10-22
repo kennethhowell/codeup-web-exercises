@@ -33,7 +33,7 @@
         "use strict";
 
         // new vars for second part [event] dom exer, skip down past first lesson
-
+        //
         var headerbtn = document.getElementById("changeheader");
         var subheaderbtn = document.getElementById("changesubheader");
         var listbtn = document.getElementById("changelist");
@@ -51,12 +51,16 @@
 
         var listlisten = function (event) {
             var listItems = document.getElementsByTagName("li");
-            listItems[1].style.color = "gray";
-            listItems[3].style.color = "gray";
-            listItems[0].style.color = "blue";
-        };
+            for (var i = 0; i < listItems.length; i++) {
+                if (listItems[i].getAttribute("data-dbid") == 1) {
+                    listItems[i].style.color = "blue";
+                } else if (i % 2 === 1) {
+                    listItems[i].style.color = "gray";
+                }
+            }
+    };
 
-        var paralisten = function () {
+    var paralisten = function () {
             var subParagraphs = document.getElementsByClassName("sub-paragraph");
             subParagraphs[0].innerText = "Mission Accomplished!";
         };
@@ -76,10 +80,21 @@
         // TODO: Uncomment the next line and get all list items
         // var listItems = document.getElementsByTagName("li");
 
-        // // TODO: Set text color on every other list item to grey
-        // listItems[1].style.color = "gray";
-        // listItems[3].style.color = "gray";
-        // // TODO: Set text color of li with dbid = 1 to blue
+        // // // TODO: Set text color on every other list item to grey
+        // for (var i = 0; i < listItems.length; i++) {
+        //     if (i % 2 === 1) {
+        //         listItems[i].style.color = "gray";
+        //     }
+        // }
+        // // listItems[1].style.color = "gray";
+        // // listItems[3].style.color = "gray";
+        // // // TODO: Set text color of li with dbid = 1 to blue
+        // for (var i = 0; i < listItems.length; i++){
+        //     if (listItems[i].getAttribute("data-dbid") == 1) {
+        //         listItems[i].style.color = "blue";
+        //     }
+        // }
+
         // listItems[0].style.color = "blue";
 
 
