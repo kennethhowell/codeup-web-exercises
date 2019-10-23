@@ -13,36 +13,9 @@
 
 <div id='map'></div>
 
-<!-- india palace 29.5219852,-98.5782075 -->
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiaG93ZWxsa2VuIiwiYSI6ImNrMjI5dmNmazFoaHgzZHE4bjVuZzhxNXMifQ.vh0krUA6tKTlchlwOlta9Q';
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 12,
-        center: [-98.4916, 29.4252]
-    });
-
-    var marker = new mapboxgl.Marker()
-        .setLngLat([-98.4916, 29.4260])
-        .addTo(map);
-
-    // var alamoPopup = new mapboxgl.Popup()
-    //     .setHTML("<p>The Alamo</p>")
-    //     .addTo(map)
-    //
-    // marker.setPopup(alamoPopup)
-
-    var indiapalacemarker = new mapboxgl.Marker()
-        .setLngLat([-98.5782075, 29.5219852])
-        .addTo(map);
-
-    var indiapalacepopup = new mapboxgl.Popup()
-        .setHTML("India Palace")
-        .addTo(map);
-
-    indiapalacemarker.setPopup(indiapalacepopup);
-
-</script>
+<!--custom js / keys js-->
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/mapbox_maps_api.js"></script>
 </body>
 </html>
