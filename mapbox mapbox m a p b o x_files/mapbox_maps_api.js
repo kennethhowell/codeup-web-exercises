@@ -6,7 +6,7 @@ var map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/howellken/ck23ffxwnfj2o1cnlfxxdh7tj",
     center: [-98.4916, 29.4252],
-    zoom: 7
+    zoom: 9
 })
 
 var favspots =  [{
@@ -47,20 +47,19 @@ function placeMarkerAndPopup(array, token, map) {
 placeMarkerAndPopup(favspots, mapboxToken, map);
 
 map.flyTo({
-    speed: 0.5,
+    speed: 0.2,
     center: [-98.5776,29.5061],
     zoom: 11
 });
 
-var test = document.getElementById("zoomlevel");
-
-test.addEventListener("change", function(){
-    var zoomvalue = document.getElementById("zoomlevel").value;
-    map.setZoom(zoomvalue);
-});
-
-function myFunction() {
-    var x = document.getElementById("mySelect").value;
-    document.getElementById("demo").innerHTML = "You selected: " + x;
+function lowzoom(){
+    map.zoom = 5
 }
 
+function medzoom(){
+    map.zoom = 15
+}
+
+function bigzoom(){
+    map.zoom = 20
+}
