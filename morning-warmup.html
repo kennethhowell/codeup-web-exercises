@@ -246,6 +246,25 @@ function personObj(name, age) {
 }
 
 console.log(personObj("Ken", 31));
+
+// fzz buzz =, 3 = fizz, 5= buzz, 15 = fizzbuzz
+
+function fizzBuzz(num){
+    if (num % 15 === 0) {
+        console.log(num + " gives a fizzbuzz");
+    } else if (num % 5 === 0) {
+        console.log(num + " gives you buzz");
+    } else if (num % 3 === 0){
+        console.log(num + " feels like a fizz");
+    } else {
+        console.log(num + " isn't special");
+    }
+}
+
+fizzBuzz(3);
+fizzBuzz(10);
+fizzBuzz(30);
+fizzBuzz(100);
 </script>
 
 </body>
