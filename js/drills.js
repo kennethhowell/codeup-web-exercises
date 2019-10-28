@@ -520,10 +520,10 @@ function rollDice (sides) {
     return bonesrolled;
 }
 
-// console.log(rollDice(6));
-// console.log(rollDice(8));
-// console.log(rollDice(12));
-// console.log(rollDice(1));
+console.log(rollDice(6));
+console.log(rollDice(8));
+console.log(rollDice(12));
+console.log(rollDice(1));
 
 
 //     Simple Function Drills
@@ -825,11 +825,11 @@ function lastChar(str) {
     return returnMessage;
 }
 
-console.log(lastChar("banana"));
-console.log(lastChar("bananas"));
-console.log(lastChar("bananas foster"));
-console.log(lastChar(true));
-console.log(lastChar(0));
+// console.log(lastChar("banana"));
+// console.log(lastChar("bananas"));
+// console.log(lastChar("bananas foster"));
+// console.log(lastChar(true));
+// console.log(lastChar(0));
 
 
 //
