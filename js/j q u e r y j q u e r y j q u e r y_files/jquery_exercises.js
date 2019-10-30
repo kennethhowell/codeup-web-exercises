@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-// $("li").css("font-size", "20px")
+$("li").css("font-size", "20px")
 
 // $("h1").css("background-color", "gold");
 // $("p").css("background-color", "gold");
@@ -24,17 +24,4 @@ $(document).ready(function() {
         $(this).css("font-size", "18px");
     })
 //         Set all li text color to red when the mouse is hovering; reset to black when it is not.
-
-
-
-    $("li").hover(
-        function () {
-            $(this).css("color","red");
-    },
-        function () {
-            $(this).css("color","black");
-    }
-
-
-    );
 });
