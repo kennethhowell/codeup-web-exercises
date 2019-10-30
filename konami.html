@@ -25,6 +25,8 @@
     var speed = 100;
     var starcraft = "8472698269738378796779877669866976";
     var konami = "3838404037393739666513";
+    var aoe2 = "72798768797384858278847273837978";
+    var shadows = "8765778065838479778065";
 
     $(document).ready(typeWriter());
 
@@ -41,6 +43,18 @@
             $("#populate").css({'background-image':'url(img/starcraft.jpg', 'background-size':'contain', 'background-repeat':'no-repeat'});
             var obj = document.createElement("audio");
             obj.src = "audio/nuclearlaunchdetected.wav";
+            obj.play();
+            keyspressed = '';
+        } else if (keyspressed.includes(aoe2)){
+            $("#populate").css({'background-image':'url(img/aoe2cobra.jpg', 'background-size':'contain', 'background-repeat':'no-repeat'});
+            var obj = document.createElement("audio");
+            obj.src = "audio/wololo.mp3";
+            obj.play();
+            keyspressed = '';
+        } else if (keyspressed.includes(shadows)) {
+            $("#populate").css({'background-image':'url(img/shadows.jpg', 'background-size':'contain', 'background-repeat':'no-repeat'});
+            var obj = document.createElement("audio");
+            obj.src = "audio/destiny.wav";
             obj.play();
             keyspressed = '';
         }
