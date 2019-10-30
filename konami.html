@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cheat Codes</title>
+    <style>
+        #populate {
+            height: 100vw;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+<!--<h1 id="wayback">cheat code central</h1>-->
+<p id="typewriter"></p>
+
+
+<div id="populate"></div>
+<button id="reset">reset</button>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    var keyspressed = '';
+    var i = 0;
+    var txt = "would you like to play a game . . . ?";
+    var speed = 100;
+    var starcraft = "8472698269738378796779877669866976";
+    var konami = "3838404037393739666513";
+
+    $(document).ready(typeWriter());
+
+    $(document).keyup(function(event){
+        keyspressed += event.keyCode.toString();
+        console.log(keyspressed);
+        if (keyspressed.includes(konami)) {
+            $("#populate").css({'background-image':'url(img/konamicode.jpg', 'background-size':'contain'});
+            var obj = document.createElement("audio");
+            obj.src = "audio/metal_gear_alert.mp3";
+            obj.play();
+            keyspressed = '';
+        } else if (keyspressed.includes(starcraft)) {
+            $("#populate").css({'background-image':'url(img/starcraft.jpg', 'background-size':'contain', 'background-repeat':'no-repeat'});
+            var obj = document.createElement("audio");
+            obj.src = "audio/nuclearlaunchdetected.wav";
+            obj.play();
+            keyspressed = '';
+        }
+    });
+
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("typewriter").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    $("#wayback").click(function(){
+        window.open('https://web.archive.org/web/20000815053936/http://www.cheatcc.com/frames.html');
+    });
+
+    $("#reset").click(function(e){
+        location.reload();
+    })
+
+
+
+</script>
+</body>
+</html>
