@@ -39,7 +39,7 @@
     "use strict";
     var keyspressed = '';
     var i = 0;
-    var txt = "shall we play a game . . . ?";
+    var txt = "would you like to play a game . . . ?";
     var speed = 80;
     var starcraft = "8472698269738378796779877669866976";
     // thereisnocowlevel
@@ -49,8 +49,6 @@
     // howdoiturnthison
     var shadows = "8765778065838479778065";
     // wampastompa
-    var hawk = "565658889384037388889658966658966";
-    // hawk A, A, A, X, Y, Up, Down, Left, Up, X, Y, A, Y, B, A, Y, B.
 
     $(document).ready(typeWriter());
 
@@ -58,8 +56,9 @@
         keyspressed += event.keyCode.toString();
         console.log(keyspressed);
         if (keyspressed.includes(konami)) {
-            $("#populate").css({'background-image':'url(img/konamicode.jpg', 'background-size':'contain'});
+            $("#populate").css({'background-image':'url(img/konamicode.jpg', 'background-size':'contain', 'background-repeat':'no-repeat'});
             var obj = document.createElement("audio");
+            alert("30 lives added.");
             obj.src = "audio/metal_gear_alert.mp3";
             obj.play();
             keyspressed = '';
@@ -81,15 +80,13 @@
             obj.src = "audio/destiny.mp3";
             obj.play();
             keyspressed = '';
-        } else if (keyspressed.includes(hawk)) {
         }
     });
 
-
+    //
     function typeWriter() {
         if (i < txt.length) {
             if(txt.charAt(i) === "?"){
-                console.log("question mar");
                 $("#typewriter").append('<span class="blink">?</span>')
             } else {
                 document.getElementById("typewriter").innerHTML += txt.charAt(i);
@@ -98,6 +95,7 @@
             setTimeout(typeWriter, speed);
         }
     }
+
 
     $("#reset").click(function(e){
         location.reload();
