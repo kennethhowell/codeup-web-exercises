@@ -2,15 +2,33 @@
 <html>
 <head>
     <title>Cheat Codes</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Vollkorn&display=swap" rel="stylesheet">
     <style>
         #populate {
             height: 100vw;
-            width: 100vw;
+            width: 80vw;
+            margin: 0 auto;
+        }
+        #typewriter {
+            color: #33ff00;
+            margin-bottom: 1em;
+            font-family: 'Vollkorn', serif;
+
+        }
+        body {
+            background-color: black;
+        }
+
+        #reset {
+            background-color: black;
+            border: none;
+            color: #ffcc00;
+            font-family: 'Source Code Pro', monospace;
+
         }
     </style>
 </head>
 <body>
-<!--<h1 id="wayback">cheat code central</h1>-->
 <p id="typewriter"></p>
 
 
@@ -21,12 +39,18 @@
     "use strict";
     var keyspressed = '';
     var i = 0;
-    var txt = "would you like to play a game . . . ?";
-    var speed = 100;
+    var txt = "shall we play a game . . . ?";
+    var speed = 80;
     var starcraft = "8472698269738378796779877669866976";
+    // thereisnocowlevel
     var konami = "3838404037393739666513";
+    // up up dn dn lft rght lft rght b a enter
     var aoe2 = "72798768797384858278847273837978";
+    // howdoiturnthison
     var shadows = "8765778065838479778065";
+    // wampastompa
+    var hawk = "565658889384037388889658966658966";
+    // hawk A, A, A, X, Y, Up, Down, Left, Up, X, Y, A, Y, B, A, Y, B.
 
     $(document).ready(typeWriter());
 
@@ -54,28 +78,37 @@
         } else if (keyspressed.includes(shadows)) {
             $("#populate").css({'background-image':'url(img/shadows.jpg', 'background-size':'contain', 'background-repeat':'no-repeat'});
             var obj = document.createElement("audio");
-            obj.src = "audio/destiny.wav";
+            obj.src = "audio/destiny.mp3";
             obj.play();
             keyspressed = '';
+        } else if (keyspressed.includes(hawk)) {
         }
     });
 
 
     function typeWriter() {
         if (i < txt.length) {
-            document.getElementById("typewriter").innerHTML += txt.charAt(i);
+            if(txt.charAt(i) === "?"){
+                console.log("question mar");
+                $("#typewriter").append('<span class="blink">?</span>')
+            } else {
+                document.getElementById("typewriter").innerHTML += txt.charAt(i);
+            }
             i++;
             setTimeout(typeWriter, speed);
         }
     }
 
-    $("#wayback").click(function(){
-        window.open('https://web.archive.org/web/20000815053936/http://www.cheatcc.com/frames.html');
-    });
-
     $("#reset").click(function(e){
         location.reload();
     })
+
+    setInterval(function()
+    { setTimeout(function() {
+        $(".blink").css("visibility","hidden");
+    },500);
+        $(".blink").css("visibility","visible");
+    },1000);
 
 
 
