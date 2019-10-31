@@ -44,26 +44,65 @@
         </dl>
 
         <button id="styletime">Visibility</button>
+
+<!--        traversing exer -->
+        <h3 id="missions">San Antonio Missions</h3>
+        <ul>
+            <li>All four churches within the park are active Catholic parishes with active services in English, Spanish, or both!</li>
+            <li>The Alamo is actually not part of the park and is administered separately.</li>
+            <li>The Missions were designated a UNESCO Heritage Site in 2015.</li>
+            <li>The San Antonio Missions received 614,810 visitors in 2012.</li>
+        </ul>
+
+        <h3 id="bigbend">Big Bend</h3>
+        <ul>
+            <li>There is a legal and active border crossing in the park between Mexico and the United States.</li>
+            <li>The park was authorized by Congress in 1935 to preserve and protect an area of the Chihuahuan Desert along the Rio Grande.</li>
+            <li>There are numerous fossils from the Cretaceous and Tertiary periods that are studied.</li>
+            <li>The park features desert and rugged hills/mountain areas and is over 800,000 acres.</li>
+        </ul>
+
+        <h3 id="bigthicket">Big Thicket</h3>
+        <ul>
+            <li>Big Thicket is a preserve vs a park meaning that, with a permit, you can consume the resources in the area whether hunting, trapping, or otherwise.</li>
+            <li>Carnivorous Plants can be found on some of the trails including pitcher plants and sundews.</li>
+            <li>There are no developed campgrounds or campsites designated, but with a permit you can camp in the wilds therein.</li>
+            <li>Prior to human expansion and development, black bears were common in the area but are now limited to rare sightings of individual bears or small populations wandering over from Louisiana.</li>
+        </ul>
+
+        <button id="parkstyletime">Style us ^</button>
     </main>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    // // $("dd").addClass("invisible");
-    // // $(".invisible").css("visibility", "hidden");
-    // $("main").append("<button id='button'>Visibility</button>");
-    // $("#button").click(function(){
-    //     $("dd").toggleClass("invisible");
-    // });
-    // $("dt").click(function(){
-    //     $(this).css("background-color", "gold");
-    //     // $(this).css("background-color", "white");
-    // });
+
+
     $(document).ready(function () {
         $("dd").addClass("invisible");
 
         $("#styletime").click(function () {
             $("dd").toggleClass("invisible");
         })
-    })
+
+        $("#parkstyletime").click(function (){
+            $('li').each(function(index) {
+                if (index === 3 || index === 7 || index === 11 ) {
+                    $(this).css('background-color', '#FF0');
+                }
+            });
+        });
+
+        $("h3").click(function () {
+            $(this).next().children().css("font-weight", "bold");
+        });
+
+//When any list item is clicked, first li of the parent ul should have a font color of blue.
+
+        $("li").click(function (){
+            $(this).parent().children().first().css("color", "blue");
+        });
+
+
+    });
 </script>
 </body>
 </html>
