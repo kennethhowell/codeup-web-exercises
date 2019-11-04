@@ -7,10 +7,20 @@
         .invisible {
             visibility: hidden;
         }
+        ul {
+            display:none;
+        }
+        h2 {
+            display: none;
+        }
     </style>
 </head>
 <body>
+<div>
+    <h1>Would you like to sign up for our newsletter?<span>x</span></h1>
+</div>
     <main>
+        <h2>Please register for our site!</h2>
         <dl>
             <dt>How old is the National Park System?</dt>
             <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916. Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park. </dd>
@@ -101,6 +111,15 @@
             $(this).parent().children().first().css("color", "blue");
         });
 
+        $("span").click(function(){
+            $(this).parent().hide();
+        });
+
+        $("h3").click(function(){
+            $(this).next().slideToggle();
+        });
+
+        $("h2").delay(8000).fadeIn(2000);
 
     });
 </script>

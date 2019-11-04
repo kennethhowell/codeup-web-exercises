@@ -360,6 +360,74 @@ var students = [
 
 console.log(isRegistered(students));;
 
+// list three web applications, explain why
+//    google maps - all around workhouse, good ui, they're collecting all my info so might as well use it anyway
+//    amazon - shopping go to, clean ui
+//    reddit - general forum, actually prefer old.reddit.com ui
+
+//    write a javascript function that will take in the whole numbers 1 - 10, and return the number spelled out as a string
+
+    function wholeNum(num){
+        if (num === 1){
+            return "one";
+        } else if (num === 2) {
+            return "two";
+        } else if (num === 3) {
+            return "three";
+        } else if (num === 4) {
+            return "four";
+        } else if (num === 5) {
+            return "five";
+        } else if (num === 6) {
+            return "six";
+        } else if (num === 7) {
+            return "seven";
+        } else if (num === 8) {
+            return "eight";
+        } else if (num === 9) {
+            return "nine";
+        } else if (num === 10) {
+            return "ten";
+        } else {
+            return "I don't know him.";
+        }
+    };
+
+//    david's example as array
+
+function numAsWord(num){
+    switch (num){
+        case 1:
+            return "one";
+        case 2:
+            return "two";
+        case 3:
+            return "three";
+        case 4:
+            return "four";
+        case 5:
+            return "five";
+        case 6:
+            return "six";
+        case 7:
+            return "seven";
+        case 8:
+            return "eight";
+        case 9:
+            return "nine";
+        case 10:
+            return "10";
+        default:
+            return false;
+    }
+};
+
+console.log(wholeNum(1));
+console.log(wholeNum(5));
+console.log(wholeNum(10));
+console.log(wholeNum("ten"));
+console.log(wholeNum(11));
+
 </script>
 
 </body>
