@@ -37,12 +37,5 @@
         "tool"
     ],
     "price": 4
-    }, {
-    "title": "Wire-stripper",
-    "quantity": 8,
-    "categories": [
-        "tool"
-    ],
-    "price": 6
-}
+    }
 ]
