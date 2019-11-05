@@ -26,12 +26,10 @@ var testget = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net
         var summation = data.daily.data[1].summary;
         console.log(summation);
 
-        // tomweather += "<span class=\"interiortext\"> Currently it is " + temp + "°F</span>";
-        // tomweather += "<span class=\"interiortext\"> Humidity: " + humidity + "%</span>";
-        // tomweather += "<span class=\"interiortext\"> Wind Speed: " + windspeed + " knots</span>";
-        // tomweather += "<span class=\"interiortext\"> Barometric Pressure: " + bpressure + "mb</span>";
-        // tomweather += "<span class=\"interiortext\">" + data.minutely.summary + "</span>";
-        // $("#today").append(currentweather);
+        tomweather += "<span class=\"interiortext\"> High/Low: " + hightemp + "°F/" + lowtemp + "°F</span>";
+        tomweather += "<span class=\"interiortext\"> Chance for precipitation: " + rainchance + "%</span>";
+        tomweather += "<span class=\"interiortext\">" + summation + "</span>";
+        $("#tomorrow").append(tomweather);
     })
 
 

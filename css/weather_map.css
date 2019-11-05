@@ -2,7 +2,7 @@ html {
     box-sizing: border-box;
 }
 
-#today {
+#today, #tomorrow {
     background-color: #E7703F;
     color: black;
     display: inline-flex;
