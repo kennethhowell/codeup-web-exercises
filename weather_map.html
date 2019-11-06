@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>weather bois</title>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <script src="js/keys.js"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
+    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
@@ -12,11 +20,15 @@
     <div class="weathercontainer" id="tomorrow"></div>
     <div class="weathercontainer" id="dayafter"></div>
 </div>
-
-<div id="icontest"></div>
+<div id='map'></div>
+<div id="geocoder"></div>
+<form>
+    Latitude: <input type="text" id="latitude" name="latitude">
+    Longitude: <input type="text" id="longitude" name="longitude">
+    <button id="forecastbutton">Check your forecast</button>
+</form>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-<script src="js/keys.js"></script>
 <script src="js/weather_map.js"></script>
 </body>
 </html>

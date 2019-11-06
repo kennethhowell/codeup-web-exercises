@@ -22,3 +22,8 @@ html {
 #cardholder {
     display: flex;
 }
+
+#map {
+    width: 80vw;
+    height: 45vh;
+}
