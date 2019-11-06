@@ -2,16 +2,23 @@ html {
     box-sizing: border-box;
 }
 
-#today, #tomorrow {
+.weathercontainer {
     background-color: #E7703F;
     color: black;
     display: inline-flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border: 1px solid black;
     border-radius: 2%;
+    width: 30vw;
+    height: 50vh;
+    padding: .5em;
 }
 
 .interiortext {
     padding: .2em;
+}
+
+#cardholder {
+    display: flex;
 }
