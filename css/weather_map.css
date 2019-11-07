@@ -2,8 +2,16 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    background-color: #90999b;
+}
+
+.headerfont {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .weathercontainer {
-    background-color: #E7703F;
+    background-color: #9CB4A8;
     color: black;
     display: inline-flex;
     flex-direction: column;
@@ -11,16 +19,19 @@ html {
     border: 1px solid black;
     border-radius: 2%;
     width: 30vw;
-    height: 50vh;
+    height: 40vh;
     padding: .5em;
 }
 
 .interiortext {
+    font-size: 1em;
     padding: .2em;
+    font-family: 'Lato', sans-serif;
 }
 
 #cardholder {
     display: flex;
+    justify-content: center;
 }
 
 #map {
@@ -28,7 +39,17 @@ html {
     height: 45vh;
     position: absolute;
     margin-left: 10%;
+    margin-top: 1em;
+    border: 1px solid black;
+
 }
+
+#header {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+}
+
+
 
 #geocoder {
     position:absolute;
@@ -41,3 +62,4 @@ html {
 #mapcontainer {
     margin: 0 auto;
 }
+

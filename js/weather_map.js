@@ -1,11 +1,20 @@
-// (function (){
+
     "use strict";
 
-    // function grabResults(result){
-    //     var resultsdata = {};
-    //     console.log(results.get(0).center());
-    //     return resultsdata;
-    // };
+    function reverseGeocode(coordinates, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(data) {
+                var cityname;
+                cityname = data.features[2].text + ", " + data.features[3].text;
+                console.log(cityname);
+                $("#cityname").empty().html(cityname.toLowerCase());
+            });
+    }
 
     var weathercondition = [
         {
@@ -64,13 +73,12 @@
         var temp = parseInt(obj.currently.temperature);
         var humidity = parseInt(obj.currently.humidity * 100);
         var windspeed = parseInt(obj.currently.windSpeed);
-        var bpressure = parseInt(obj.currently.pressure);
+        currentweather += "<span class=\"interiortext\"> Today:</span>";
         currentweather += "<span class=\"interiortext\"> Currently it is: " + temp + "°F</span>";
-        currentweather += "<img src=\"" + icon + "\">";
         currentweather += "<span class=\"interiortext\"> Humidity: " + humidity + "%</span>";
         currentweather += "<span class=\"interiortext\"> Wind Speed: " + windspeed + " knots</span>";
-        currentweather += "<span class=\"interiortext\"> Barometric Pressure: " + bpressure + "mb</span>";
-        // currentweather += "<span class=\"interiortext\">" + obj.minutely.summary + "</span>";
+        currentweather += "<span class=\"interiortext\">" + obj.hourly.summary + "</span>";
+        currentweather += "<img src=\"" + icon + "\">";
         $("#today").html(currentweather);
     };
 
@@ -84,9 +92,9 @@
         var tomweather = "";
         tomweather += "<span class=\"interiortext\">Tomorrow: </span>";
         tomweather += "<span class=\"interiortext\"> High/Low: " + hightemp + "°F/" + lowtemp + "°F</span>";
-        tomweather += "<img src=\"" + icon + "\">";
         tomweather += "<span class=\"interiortext\"> Chance for precipitation: " + rainchance + "%</span>";
         tomweather += "<span class=\"interiortext\">" + summation + "</span>";
+        tomweather += "<img src=\"" + icon + "\">";
         $("#tomorrow").html(tomweather);
     };
 
@@ -100,9 +108,9 @@
         var dayafttomweather = "";
         dayafttomweather += "<span class=\"interiortext\">Day after tomorrow: </span>";
         dayafttomweather += "<span class=\"interiortext\"> High/Low: " + hightemp + "°F/" + lowtemp + "°F</span>";
-        dayafttomweather += "<img src=\"" + icon + "\">";
         dayafttomweather += "<span class=\"interiortext\"> Chance for precipitation: " + rainchance + "%</span>";
         dayafttomweather += "<span class=\"interiortext\">" + summation + "</span>";
+        dayafttomweather += "<img src=\"" + icon + "\">";
         $("#dayafter").html(dayafttomweather);
     };
 
@@ -110,9 +118,6 @@
     var latitude = "29.4241";
     var url = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkskyToken + "/" + latitude + "," + longitude;
     var getweather = $.get(url);
-    // var currentweather = "";
-    // var tomweather = "";
-    // var dayafttomweather = "";
     mapboxgl.accessToken = mapboxToken;
 
 
@@ -130,11 +135,10 @@
 
     function onDragEnd() {
         var lngLat = marker.getLngLat();
-        console.log(lngLat.lng);
-        console.log(lngLat.lat);
         $("#today").empty();
         $("#tomorrow").empty();
         $("#dayafter").empty();
+        reverseGeocode(lngLat, mapboxToken);
         latitude = lngLat.lat;
         longitude = lngLat.lng;
         url = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkskyToken + "/" + latitude + "," + longitude;
@@ -149,12 +153,6 @@
 
     marker.on('dragend', onDragEnd);
 
-    // map.addControl(new MapboxGeocoder({
-    //     accessToken: mapboxToken,
-    //     mapboxgl: mapboxgl,
-    //     marker: false,
-    // }));
-
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl,
@@ -162,18 +160,6 @@
     });
 
    $('#geocoder').append(geocoder.onAdd(map));
-
-    // geocoder.on('result', function(result) {
-    //     // console.log(result);
-    //     // var testcenter = result
-    //     // console.log(testcenter);
-    //     // console.log(testcenter.center);
-    //     // console.log(result.center[0]);
-    //     // console.log(result.center[1]);
-    // })
-    //
-    // result.center
-
 
 
 $(document).ready(function(){
@@ -185,13 +171,13 @@ $(document).ready(function(){
         var temp = parseInt(data.currently.temperature);
         var humidity = parseInt(data.currently.humidity * 100);
         var windspeed = parseInt(data.currently.windSpeed);
-        var bpressure = parseInt(data.currently.pressure);
-        currentweather += "<span class=\"interiortext\"> Currently it is: " + temp + "°F</span>";
-        currentweather += "<img src=\"" + icon + "\">";
+        currentweather += "<span class=\"interiortext\"> Today:</span>";
+        currentweather += "<span class=\"interiortext\"> Currently: " + temp + "°F</span>";
         currentweather += "<span class=\"interiortext\"> Humidity: " + humidity + "%</span>";
         currentweather += "<span class=\"interiortext\"> Wind Speed: " + windspeed + " knots</span>";
-        currentweather += "<span class=\"interiortext\"> Barometric Pressure: " + bpressure + "mb</span>";
         currentweather += "<span class=\"interiortext\">" + data.minutely.summary + "</span>";
+        currentweather += "<img src=\"" + icon + "\">";
+
         $("#today").html(currentweather);
     });
 
@@ -206,9 +192,10 @@ $(document).ready(function(){
 
         tomweather += "<span class=\"interiortext\">Tomorrow: </span>";
         tomweather += "<span class=\"interiortext\"> High/Low: " + hightemp + "°F/" + lowtemp + "°F</span>";
-        tomweather += "<img src=\"" + icon + "\">";
         tomweather += "<span class=\"interiortext\"> Chance for precipitation: " + rainchance + "%</span>";
         tomweather += "<span class=\"interiortext\">" + summation + "</span>";
+        tomweather += "<img src=\"" + icon + "\">";
+
         $("#tomorrow").html(tomweather);
     });
 
@@ -222,9 +209,10 @@ $(document).ready(function(){
         var dayafttomweather = "";
         dayafttomweather += "<span class=\"interiortext\">Day after tomorrow: </span>";
         dayafttomweather += "<span class=\"interiortext\"> High/Low: " + hightemp + "°F/" + lowtemp + "°F</span>";
-        dayafttomweather += "<img src=\"" + icon + "\">";
         dayafttomweather += "<span class=\"interiortext\"> Chance for precipitation: " + rainchance + "%</span>";
         dayafttomweather += "<span class=\"interiortext\">" + summation + "</span>";
+        dayafttomweather += "<img src=\"" + icon + "\">";
+
         $("#dayafter").html(dayafttomweather);
 
     });
@@ -247,21 +235,21 @@ $(document).ready(function(){
         });
     });
 
-        function grabResultsUpdate(result){
-            var resultsdata = result;
-            console.log(resultsdata);
-        };
 
 
     geocoder.on('result', function(result){
         var storage;
+        var cityname;
+        cityname = result.result.text + ", " + result.result.context[0].text;
+        $("#cityname").empty().html(cityname.toLowerCase());
         storage = result.result.center;
-        console.log(storage);
         $("#today").empty();
         $("#tomorrow").empty();
         $("#dayafter").empty();
         latitude = storage[1];
         longitude = storage[0];
+        var arraycords = [longitude, latitude];
+        marker.setLngLat(arraycords);
         url = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkskyToken + "/" + latitude + "," + longitude;
         getweather = $.get(url);
         getweather.done(function(data){
@@ -277,4 +265,3 @@ $(document).ready(function(){
 
 });
 
-// });
