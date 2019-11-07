@@ -151,10 +151,24 @@
 
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
+        mapboxgl: mapboxgl,
+        marker: false
     });
 
    $('#geocoder').append(geocoder.onAdd(map));
+
+
+    map.on('load', function() {
+        // Listen for the `result` event from the Geocoder
+        // `result` event is triggered when a user makes a selection
+        //  Add a marker at the result's coordinates
+        geocoder.on('result', function(e) {
+            // map.getSource('single-point').setData(e.result.geometry);
+            console.log(result[0g]);
+        });
+    });
+
+
 
 
     $(document).ready(function(){

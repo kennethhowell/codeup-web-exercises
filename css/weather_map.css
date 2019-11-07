@@ -26,4 +26,18 @@ html {
 #map {
     width: 80vw;
     height: 45vh;
+    position: absolute;
+    margin-left: 10%;
+}
+
+#geocoder {
+    position:absolute;
+    z-index:1;
+    width:50%;
+    left:40%;
+    top:20px;
+}
+
+#mapcontainer {
+    margin: 0 auto;
 }
