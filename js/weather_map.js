@@ -1,5 +1,11 @@
-(function (){
+// (function (){
     "use strict";
+
+    // function grabResults(result){
+    //     var resultsdata = {};
+    //     console.log(results.get(0).center());
+    //     return resultsdata;
+    // };
 
     var weathercondition = [
         {
@@ -98,7 +104,7 @@
         dayafttomweather += "<span class=\"interiortext\"> Chance for precipitation: " + rainchance + "%</span>";
         dayafttomweather += "<span class=\"interiortext\">" + summation + "</span>";
         $("#dayafter").html(dayafttomweather);
-    }
+    };
 
     var longitude = "-98.4936";
     var latitude = "29.4241";
@@ -115,7 +121,7 @@
         style: "mapbox://styles/howellken/ck23ffxwnfj2o1cnlfxxdh7tj",
         center: [-98.4916, 29.4252],
         zoom: 7
-    })
+    });
 
     var marker = new mapboxgl.Marker()
         .setLngLat([-98.4861, 29.4260])
@@ -139,7 +145,7 @@
             tomorrowUpdate(baton);
             dayaftertomUpdate(baton);
         });
-        }
+    };
 
     marker.on('dragend', onDragEnd);
 
@@ -157,21 +163,21 @@
 
    $('#geocoder').append(geocoder.onAdd(map));
 
-
-    map.on('load', function() {
-        // Listen for the `result` event from the Geocoder
-        // `result` event is triggered when a user makes a selection
-        //  Add a marker at the result's coordinates
-        geocoder.on('result', function(e) {
-            // map.getSource('single-point').setData(e.result.geometry);
-            console.log(result[0g]);
-        });
-    });
-
-
+    // geocoder.on('result', function(result) {
+    //     // console.log(result);
+    //     // var testcenter = result
+    //     // console.log(testcenter);
+    //     // console.log(testcenter.center);
+    //     // console.log(result.center[0]);
+    //     // console.log(result.center[1]);
+    // })
+    //
+    // result.center
 
 
-    $(document).ready(function(){
+
+$(document).ready(function(){
+
     getweather.done(function(data){
         var currentweather = "";
         var condition = data.currently.icon;
@@ -240,5 +246,35 @@
             dayaftertomUpdate(baton);
         });
     });
+
+        function grabResultsUpdate(result){
+            var resultsdata = result;
+            console.log(resultsdata);
+        };
+
+
+    geocoder.on('result', function(result){
+        var storage;
+        storage = result.result.center;
+        console.log(storage);
+        $("#today").empty();
+        $("#tomorrow").empty();
+        $("#dayafter").empty();
+        latitude = storage[1];
+        longitude = storage[0];
+        url = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkskyToken + "/" + latitude + "," + longitude;
+        getweather = $.get(url);
+        getweather.done(function(data){
+            var baton = data;
+            currentUpdate(baton);
+            tomorrowUpdate(baton);
+            dayaftertomUpdate(baton);
+        });
+    });
+
+
+
+
 });
-})();
+
+// });
