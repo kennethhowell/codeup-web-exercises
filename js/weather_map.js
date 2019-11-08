@@ -1,5 +1,4 @@
-
-    "use strict";
+"use strict";
 
     function reverseGeocode(coordinates, token) {
         var baseUrl = 'https://api.mapbox.com';
@@ -14,30 +13,7 @@
                 console.log(cityname);
                 $("#cityname").empty().html(cityname.toLowerCase());
             });
-    }
-
-    var weathercondition = [
-        {
-            "clear-day":"img/weathericons/Sun.svg"
-        },{
-            "clear-night":"img/weathericons/Moon-Full.svg"
-        },{
-            "rain":"img/weathericons/Cloud-Rain-Alt.svg"
-        },{
-            "snow":"img/weathericons/Snowflake.svg"
-        },{
-            "sleet":"img/weathericons/Cloud-Hail.svg"
-        },{
-            "wind":"img/weathericons/Wind.svg"
-        },{
-            "fog":"img/weathericons/Cloud-Fog-Sun-Alt.svg"
-        },{
-            "cloudy":"img/weathericons/Cloud.svg"
-        },{
-            "partly-cloudy-day":"img/weathericons/Cloud-Sun.svg"
-        },{
-            "partly-cloudy-night":"img/weathericons/Cloud-Moon.svg"
-        },];
+    };
 
     function iconMatch(weather){
         switch(weather) {
@@ -64,7 +40,7 @@
         }
     };
 
-
+    //functions to hand off data to
 
     function currentUpdate(obj){
         var currentweather = "";
@@ -114,6 +90,28 @@
         $("#dayafter").html(dayafttomweather);
     };
 
+    var weathercondition = [
+        {
+            "clear-day":"img/weathericons/Sun.svg"
+        },{
+            "clear-night":"img/weathericons/Moon-Full.svg"
+        },{
+            "rain":"img/weathericons/Cloud-Rain-Alt.svg"
+        },{
+            "snow":"img/weathericons/Snowflake.svg"
+        },{
+            "sleet":"img/weathericons/Cloud-Hail.svg"
+        },{
+            "wind":"img/weathericons/Wind.svg"
+        },{
+            "fog":"img/weathericons/Cloud-Fog-Sun-Alt.svg"
+        },{
+            "cloudy":"img/weathericons/Cloud.svg"
+        },{
+            "partly-cloudy-day":"img/weathericons/Cloud-Sun.svg"
+        },{
+            "partly-cloudy-night":"img/weathericons/Cloud-Moon.svg"
+        },];
     var longitude = "-98.4936";
     var latitude = "29.4241";
     var url = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkskyToken + "/" + latitude + "," + longitude;
@@ -128,6 +126,7 @@
         zoom: 7
     });
 
+    //marker code and settings below
     var marker = new mapboxgl.Marker()
         .setLngLat([-98.4861, 29.4260])
         .setDraggable(true)
@@ -153,6 +152,7 @@
 
     marker.on('dragend', onDragEnd);
 
+    //geocoder code and settings
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl,
@@ -164,6 +164,7 @@
 
 $(document).ready(function(){
 
+    //three cards in order
     getweather.done(function(data){
         var currentweather = "";
         var condition = data.currently.icon;
@@ -179,9 +180,7 @@ $(document).ready(function(){
         currentweather += "<img src=\"" + icon + "\">";
 
         $("#today").html(currentweather);
-    });
 
-    getweather.done(function(data){
         var hightemp = parseInt(data.daily.data[1].temperatureHigh);
         var lowtemp = parseInt(data.daily.data[1].temperatureLow);
         var rainchance = parseInt(data.daily.data[1].precipProbability * 100);
@@ -197,9 +196,7 @@ $(document).ready(function(){
         tomweather += "<img src=\"" + icon + "\">";
 
         $("#tomorrow").html(tomweather);
-    });
 
-    getweather.done(function (data){
         var hightemp = parseInt(data.daily.data[2].temperatureHigh);
         var lowtemp = parseInt(data.daily.data[2].temperatureLow);
         var rainchance = parseInt(data.daily.data[2].precipProbability * 100);
@@ -214,28 +211,9 @@ $(document).ready(function(){
         dayafttomweather += "<img src=\"" + icon + "\">";
 
         $("#dayafter").html(dayafttomweather);
-
     });
 
-
-    $("#forecastbutton").click(function (e){
-        e.preventDefault();
-        $("#today").empty();
-        $("#tomorrow").empty();
-        $("#dayafter").empty();
-        latitude = $("#latitude").val();
-        longitude = $("#longitude").val();
-        url = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkskyToken + "/" + latitude + "," + longitude;
-        getweather = $.get(url);
-        getweather.done(function(data){
-            var baton = data;
-            currentUpdate(baton);
-            tomorrowUpdate(baton);
-            dayaftertomUpdate(baton);
-        });
-    });
-
-
+    //searchbox functionality
 
     geocoder.on('result', function(result){
         var storage;
@@ -259,9 +237,5 @@ $(document).ready(function(){
             dayaftertomUpdate(baton);
         });
     });
-
-
-
-
 });
 

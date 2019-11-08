@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>weather bois</title>
+
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
     <script src="js/keys.js"></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
-    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
-<div id="header"><h1 class="headerfont">weather for: <span id="cityname">san antonio, texas</span></h1></div>
+
+<div id="header">
+    <h1 class="headerfont">weather for: <span id="cityname">san antonio, texas</span></h1>
+</div>
+
 <div id="cardholder" class="container">
     <div class="weathercontainer" id="today"></div>
     <div class="weathercontainer" id="tomorrow"></div>
     <div class="weathercontainer" id="dayafter"></div>
 </div>
+
 <div id="mapcontainer">
     <div id='map'>
         <div id="geocoder" class="geocoder">
@@ -28,6 +34,7 @@
         </div>
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script src="js/weather_map.js"></script>
 </body>
