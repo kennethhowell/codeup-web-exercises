@@ -455,6 +455,19 @@ function numAsWord(num){
     };
 
 console.log(randomBoolean());
+//    givne this array [1,2,3,4,5,6,7,8] write a loop that reutns array of all even
+
+    var numarray = [1 , 2 , 3 , 4 , 5, 6, 7 , 8]
+
+function onlyEvenNumbers (input) {
+    let even = function (number) {
+        return number % 2 == 0;
+    };
+    let onlyeven = input.filter(even);
+    return onlyeven
+}
+
+console.log(onlyEvenNumbers(numarray));
 </script>
 
 </body>
