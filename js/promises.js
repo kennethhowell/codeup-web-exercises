@@ -29,7 +29,7 @@ function lastCommit(username) {
                     bucket = bucket.join("-");
 
                     return bucket;
-            }).then(bucket => console.log(bucket))
+            }).then(bucket => console.log(`${username}'s last commit was ${bucket}`))
         }).catch(() => console.log("failure"));
 }
 
