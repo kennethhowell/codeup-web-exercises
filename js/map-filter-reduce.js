@@ -64,9 +64,12 @@ let longestEmail = emailList.reduce(function(longest, email){
     };
 },"")
 
+console.log(longestEmail);
 let userNames = users.reduce(function(string, user){
     return string + ` ${user.name}, `;
 },"")
 
 
-console.log(userNames);
+console.log("Your instructors are:" + userNames);
+
+// use reduce to get unique list of languages
