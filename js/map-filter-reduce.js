@@ -38,7 +38,7 @@ const users = [
 
 //Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 let threeLanguages = users.filter( user => user.languages.length >= 3);
-console.log(threeLanguages);
+// console.log(threeLanguages);
 
 //Use .map to create an array of strings where each element is a user's email address
 let emailList = users.map(user => user.email);
@@ -49,14 +49,24 @@ let yearsTotal = users.reduce((total, user) => {
     return total + user.yearsOfExperience;
 }, 0);
 
-console.log(yearsTotal);
+// console.log(yearsTotal);
 //avg years experience
-console.log(yearsTotal / users.length);
+// console.log(yearsTotal / users.length);
 
 //Use .reduce to get the longest email from the list of users.
 
-let longestemail =  users.reduce((longest, user) => {
-    if user.email.length >
-}, []);
+let longestEmail = emailList.reduce(function(longest, email){
+    // return longest.length > email.length ? longest : email;
+    if (longest.length > email.length) {
+        return longest;
+    } else {
+        return email;
+    };
+},"")
 
-console.log(longestemail);
+let userNames = users.reduce(function(string, user){
+    return string + ` ${user.name}, `;
+},"")
+
+
+console.log(userNames);
