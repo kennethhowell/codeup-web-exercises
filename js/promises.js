@@ -34,13 +34,6 @@ function lastCommit(username) {
 }
 
 
-// console.log(fetch("https://api.github.com/users/kennethhowell/events", {headers: {'Authorization': "token " + githubToken}})
-//     .then(response => {
-//         console.log(response.json());;
-//         console.log(response);
-//     }));
-
-
 lastCommit("kennethhowell");
 lastCommit("christopheraguirre210");
 
