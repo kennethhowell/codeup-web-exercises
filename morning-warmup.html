@@ -468,6 +468,21 @@ function onlyEvenNumbers (input) {
 }
 
 console.log(onlyEvenNumbers(numarray));
+
+    const randomnumber = Math.floor(Math.random() * 10) + 1;
+
+    function evensPromise(num){
+        console.log(num);
+        return new Promise ((resolve, reject) => {
+            if (num % 2 === 0) {
+                resolve(console.log("this number was even"));
+            } else {
+                reject(console.log("this number was odd"));
+            }
+        })
+    }
+
+    evensPromise(randomnumber);
 </script>
 
 </body>
