@@ -483,6 +483,18 @@ console.log(onlyEvenNumbers(numarray));
     }
 
     evensPromise(randomnumber);
+
+
+//     write function that returns promse resolvem essage of hello write to html an h1 that has the text of resolve
+
+    const helloPromise = () => {
+        // let hello = "Hello!";
+        return new Promise(resolve => {
+            resolve(document.body.innerHTML = `<h1>${"Hello!"}</h1>` )
+        })
+    }
+
+    helloPromise();
 </script>
 
 </body>
